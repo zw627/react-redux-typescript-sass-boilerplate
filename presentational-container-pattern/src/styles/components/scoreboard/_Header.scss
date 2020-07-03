@@ -1,0 +1,23 @@
+// --------------------------------------------- //
+
+.header {
+  background: $color-theme-darkmode-2;
+  border-bottom: solid 2px $color-border-darkmode;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  height: 124px;
+  h1 {
+    flex-grow: 1;
+    font-size: $font-size-heading;
+    letter-spacing: 3px;
+  }
+
+  #{$light-theme} & {
+    background: $color-theme-lightmode-1;
+    border-bottom: solid 2px $color-border-lightmode;
+  }
+}
+
+// --------------------------------------------- //

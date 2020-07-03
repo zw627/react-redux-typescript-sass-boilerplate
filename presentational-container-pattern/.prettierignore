@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+bower_components
+
+# Testing
+coverage
+
+# Production (build, distribution)
+dist
+build
+
+# TypeScript config
+tsconfig.json
