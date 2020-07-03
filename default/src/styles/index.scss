@@ -1,0 +1,25 @@
+// Normalize (see https://github.com/csstools/postcss-normalize#postcss-import-usage)
+@import-normalize;
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
+
+// Functions, helpers, mixins, variables
+@import "./utilities/variables", "./utilities/mixins";
+
+// Base
+@import "./base/base";
+
+// Components - notification
+@import "./components/notification/index";
+
+// Components - scoreboard
+@import "./components/scoreboard/AddPlayerForm",
+  "./components/scoreboard/Counter", "./components/scoreboard/Crown",
+  "./components/scoreboard/Header", "./components/scoreboard/index",
+  "./components/scoreboard/Player", "./components/scoreboard/PlayerDetail",
+  "./components/scoreboard/Stats", "./components/scoreboard/Stopwatch",
+  "./components/scoreboard/ThemeSwitch";
+
+// Media queries
+@import "./queries/queries";

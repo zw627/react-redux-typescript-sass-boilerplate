@@ -1,0 +1,35 @@
+@media (max-width: 701px) {
+  .scoreboard {
+    width: 98%;
+    min-width: 361px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header h1 {
+    visibility: hidden;
+    font-size: 0px;
+  }
+
+  .stats {
+    font-size: 14px;
+  }
+
+  .stopwatch,
+  .counter {
+    width: 155px;
+  }
+
+  .player {
+    font-size: 16px;
+  }
+
+  .stopwatch-time {
+    font-size: 24px;
+  }
+
+  .counter-score {
+    font-size: 20px;
+    min-width: 55px;
+  }
+}

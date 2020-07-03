@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+bower_components
+
+# Testing
+coverage
+
+# Production (build, distribution)
+dist
+build
+
+# Config
+webpack.*.js
+jest.*.js
+*.config.js

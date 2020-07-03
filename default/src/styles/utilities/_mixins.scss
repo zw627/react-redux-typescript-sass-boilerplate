@@ -1,0 +1,69 @@
+// --------------------------------------------- //
+
+@mixin button-effect-dark {
+  #{$hover-enabled} &:hover {
+    background: white;
+    color: $color-theme-darkmode-1;
+  }
+  &:active {
+    background: rgba(white, 0.6) !important;
+    color: $color-theme-darkmode-1 !important;
+  }
+}
+
+@mixin button-effect-light {
+  #{$light-hover} &:hover {
+    background: $color-body-lightmode-1;
+    color: $color-theme-lightmode-3;
+  }
+  #{$light-theme} &:active {
+    background: rgba($color-body-lightmode-1, 0.6) !important;
+    color: $color-theme-lightmode-3 !important;
+  }
+}
+
+// --------------------------------------------- //
+
+@mixin increment-effect-dark {
+  #{$hover-enabled} &:hover {
+    background: rgba($color-counter-increment, 0.8);
+  }
+  &:active {
+    background: rgba($color-counter-increment, 0.6) !important;
+  }
+}
+
+@mixin increment-effect-light {
+  #{$light-hover} &:hover {
+    color: white;
+    background: rgba($color-counter-increment, 0.7);
+  }
+  #{$light-theme} &:active {
+    color: white !important;
+    background: $color-counter-increment !important;
+  }
+}
+
+// --------------------------------------------- //
+
+@mixin decrement-effect-dark {
+  #{$hover-enabled} &:hover {
+    background: rgba($color-counter-decrement, 0.8);
+  }
+  &:active {
+    background: rgba($color-counter-decrement, 0.6) !important;
+  }
+}
+
+@mixin decrement-effect-light {
+  #{$light-hover} &:hover {
+    color: white;
+    background: rgba($color-counter-decrement, 0.7);
+  }
+  #{$light-theme} &:active {
+    color: white;
+    background: $color-counter-decrement;
+  }
+}
+
+// --------------------------------------------- //
