@@ -1,2 +1,3 @@
-# react-redux-typescript-sass-boilerplate
-A boilerplate for React-Redux-TypeScript-Sass projects.
+# react-redux-typescript-sass-boilerplates
+
+Boilerplates for React-Redux-TypeScript-Sass projects.
