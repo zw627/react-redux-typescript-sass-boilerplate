@@ -1,10 +1,9 @@
 name: Node.js CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  build:
-
+  build_first:
     runs-on: ubuntu-latest
 
     strategy:
@@ -17,17 +16,43 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: default
-      run: yarn install --frozen-lockfile
-      run: yarn build --if-present
-      run: yarn test
-      working-directory: default
-      env:
-        CI: true
-    - name: presentational-container-pattern
-      run: yarn install --frozen-lockfile
-      run: yarn build --if-present
-      run: yarn test
-      working-directory: presentational-container-pattern
-      env:
-        CI: true
+    - name: Install dependencies, build, and test
+    - run: | 
+        yarn install --frozen-lockfile
+        yarn build --if-present
+        yarn test
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./default
+
+    env:
+      CI: true
+
+  build_second:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies, build, and test
+    - run: | 
+        yarn install --frozen-lockfile
+        yarn build --if-present
+        yarn test
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./presentational-container-pattern
+
+    env:
+      CI: true
