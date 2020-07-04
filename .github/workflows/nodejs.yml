@@ -1,6 +1,10 @@
 name: Node.js CI
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build_default:
@@ -16,12 +20,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: node -v
-    - run: npm -v
     - run: yarn -v
-    - run: npm install
-    - run: npm run build --if-present
-    - run: npm test
+    - run: yarn install
+    - run: yarn test
+    - run: yarn build
 
     defaults:
       run:
@@ -44,12 +46,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: node -v
-    - run: npm -v
     - run: yarn -v
-    - run: npm install
-    - run: npm run build --if-present
-    - run: npm test
+    - run: yarn install
+    - run: yarn test
+    - run: yarn build
 
     defaults:
       run:
