@@ -67,12 +67,18 @@ module.exports = {
 
       // Analyze project structure and size of each chunk
       new BundleAnalyzerPlugin({
-        // http://localhost:8888
-        analyzerMode: "server",
-        analyzerHost: "127.0.0.1",
-        analyzerPort: 8888,
-        // Open automatically on every run
-        openAnalyzer: true,
+        // Static mode
+        analyzerMode: "static", // Generate a HTML file with bundle report
+        reportFilename: path.resolve(
+          __dirname,
+          "coverage/webpack-bundle-analyzer/report.html"
+        ),
+
+        // Server mode
+        // analyzerMode: "server",     // Start a HTTP server to show bundle report
+        // analyzerHost: "127.0.0.1",  // http://localhost
+        // analyzerPort: 8888,         // http://localhost:8888
+        // openAnalyzer: true,         // Open automatically on every run
       }),
     ],
 
