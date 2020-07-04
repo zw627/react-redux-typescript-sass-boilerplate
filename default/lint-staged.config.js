@@ -39,12 +39,9 @@ module.exports = {
   // TypeScript
   "*.(ts|tsx)": () => "tsc -p tsconfig.json --noEmit --skipLibCheck",
 
-  // ESLint (`*.(js|jsx|ts|tsx)` does not work for some reasons)
-  "*/**.(js|jsx|ts|tsx)": (absolutePaths) =>
-    `eslint --fix --max-warnings=0  ${toForwardSlash(
-      absolutePaths,
-      "relative"
-    )}`,
+  // ESLint (use same regex as Jest will not work)
+  "*.(j|t)s(x)?": (absolutePaths) =>
+    `eslint --fix ${toForwardSlash(absolutePaths, "relative")}`,
 
   // Jest
   "*.(js|jsx|ts|tsx)": (absolutePaths) =>
