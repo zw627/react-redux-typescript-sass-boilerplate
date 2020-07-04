@@ -16,11 +16,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install dependencies, build, and test
-    - run: | 
-        yarn install --frozen-lockfile
-        yarn build --if-present
-        yarn test
+    - run: yarn install --frozen-lockfile
+    - run: yarn build --if-present
+    - run: yarn test
 
     defaults:
       run:
@@ -43,11 +41,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install dependencies, build, and test
-    - run: | 
-        yarn install --frozen-lockfile
-        yarn build --if-present
-        yarn test
+    - run: yarn install --frozen-lockfile
+    - run: yarn build --if-present
+    - run: yarn test
 
     defaults:
       run:
