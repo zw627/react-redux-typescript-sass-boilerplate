@@ -3,7 +3,7 @@ name: Node.js CI
 on: [push, pull_request]
 
 jobs:
-  build_first:
+  build_default:
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,9 +16,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test
+    - run: node -v
+    - run: npm -v
+    - run: yarn -v
+    - run: npm install
+    - run: npm run build --if-present
+    - run: npm test
 
     defaults:
       run:
@@ -28,7 +31,7 @@ jobs:
     env:
       CI: true
 
-  build_second:
+  build_container_pattern:
     runs-on: ubuntu-latest
 
     strategy:
@@ -41,9 +44,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test
+    - run: node -v
+    - run: npm -v
+    - run: yarn -v
+    - run: npm install
+    - run: npm run build --if-present
+    - run: npm test
 
     defaults:
       run:
