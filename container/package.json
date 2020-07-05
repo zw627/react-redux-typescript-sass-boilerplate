@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-typescript-sass-boilerplate",
+  "name": "react-redux-typescript-sass-boilerplates",
   "version": "0.1.0",
-  "description": "A boilerplate for React-Redux-TypeScript-Sass projects with proper linting, formatting, testing, and some deployment optimizations.",
+  "description": "Boilerplates for React-Redux-TypeScript-Sass projects with proper linting, formatting, testing, deployment optimizations, etc.",
   "private": true,
   "main": "index.js",
   "scripts": {
