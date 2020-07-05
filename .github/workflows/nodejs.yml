@@ -3,8 +3,8 @@ name: Build
 on: [push]
 
 jobs:
-  # react-redux-typescript-sass-boilerplates/default
-  Default:
+  # react-redux-typescript-sass-boilerplates/default-pattern
+  default-pattern:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -40,7 +40,7 @@ jobs:
       CI: true
 
   # react-redux-typescript-sass-boilerplates/container-pattern
-  Container Pattern:
+  container-pattern:
     runs-on: ${{ matrix.os }}
 
     strategy:
