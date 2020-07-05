@@ -70,7 +70,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./presentational-container-pattern
+        working-directory: ./container
 
     env:
       CI: true
