@@ -21,7 +21,7 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn build
-    - uses: codecov/codecov-action@v1.0.10
+    - uses: codecov/codecov-action@v1
       with: 
         token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -51,7 +51,7 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn build
-    - uses: codecov/codecov-action@v1.0.10
+    - uses: codecov/codecov-action@v1
       with: 
         token: ${{ secrets.CODECOV_TOKEN }}
 
