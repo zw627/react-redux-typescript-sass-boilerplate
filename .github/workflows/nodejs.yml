@@ -13,9 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: codecov/codecov-action@v1
-      with: 
-        token: ${{ secrets.CODECOV_TOKEN }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -24,6 +21,9 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn build
+    - uses: codecov/codecov-action@v1.0.10
+      with: 
+        token: ${{ secrets.CODECOV_TOKEN }}
 
     defaults:
       run:
@@ -43,9 +43,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: codecov/codecov-action@v1
-      with: 
-        token: ${{ secrets.CODECOV_TOKEN }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -54,6 +51,9 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn build
+    - uses: codecov/codecov-action@v1.0.10
+      with: 
+        token: ${{ secrets.CODECOV_TOKEN }}
 
     defaults:
       run:
