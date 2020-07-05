@@ -28,8 +28,6 @@ jobs:
       run: yarn build
     - name: Post Coverage
       uses: codecov/codecov-action@v1.0.10
-      with: 
-        token: ${{ secrets.CODECOV_TOKEN }}
       if: matrix.os == 'ubuntu-latest' && matrix.node-version == '10.x'
 
     defaults:
@@ -65,8 +63,6 @@ jobs:
       run: yarn build
     - name: Post Coverage
       uses: codecov/codecov-action@v1.0.10
-      with: 
-        token: ${{ secrets.CODECOV_TOKEN }}
       if: matrix.os == 'ubuntu-latest' && matrix.node-version == '10.x'
 
     defaults:
