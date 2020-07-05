@@ -30,7 +30,7 @@ jobs:
       uses: codecov/codecov-action@v1.0.10
       with: 
         token: ${{ secrets.CODECOV_TOKEN }}
-      if: matrix.os == ubuntu-latest
+      if: matrix.os == 'ubuntu-latest'
 
     defaults:
       run:
@@ -67,7 +67,7 @@ jobs:
       uses: codecov/codecov-action@v1.0.10
       with: 
         token: ${{ secrets.CODECOV_TOKEN }}
-      if: matrix.os == ubuntu-latest
+      if: matrix.os == 'ubuntu-latest'
 
     defaults:
       run:
