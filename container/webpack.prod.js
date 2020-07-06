@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 
 const paths = require("./webpack.common.js").paths;
 const common = require("./webpack.common.js").config;
