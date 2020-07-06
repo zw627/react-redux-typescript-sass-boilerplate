@@ -28,7 +28,7 @@ jobs:
       run: yarn build
     - name: Post Coverage
       uses: codecov/codecov-action@v1.0.10
-      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '10.x'
+      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '12.x'
 
     defaults:
       run:
@@ -63,7 +63,7 @@ jobs:
       run: yarn build
     - name: Post Coverage
       uses: codecov/codecov-action@v1.0.10
-      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '10.x'
+      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '12.x'
 
     defaults:
       run:
