@@ -10641,6 +10641,11 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
+tslib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
+  integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
+
 tsutils@^3.17.1:
   version "3.17.1"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.17.1.tgz#ed719917f11ca0dee586272b2ac49e015a2dd759"
@@ -11187,12 +11192,13 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.0.4.tgz#70338267ec8a6e713d2c80ef04b5ed4e33ac948c"
-  integrity sha512-lOb9MEWoPBZ611bRECti/LXwLN8oWwfjoKsPueiN8wbmFR+VQXlWd53mFRyUoXSLY9705eSyUtzlftV7tI0iiQ==
+webpack-merge@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.0.6.tgz#f4843a8339059cf714983045d246c7e4fc83a0b2"
+  integrity sha512-RkHtvANezZXAgFX2Qu616nakTW6Cv1aSk9A3LVG96k6pUa3j0ZXBvDRWMClTDa6OKqnxnhrM13Q+UZrBhAVaTw==
   dependencies:
     clone-deep "^4.0.1"
+    tslib "^2.0.0"
     wildcard "^2.0.0"
 
 webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
