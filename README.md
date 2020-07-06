@@ -1,5 +1,6 @@
 # React-Redux-Typescript-Sass boilerplates
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d42c4d0a4f4611b17c9d0a811d7541)](https://app.codacy.com/manual/zhuanyan.wang/react-redux-typescript-sass-boilerplates?utm_source=github.com&utm_medium=referral&utm_content=zw627/react-redux-typescript-sass-boilerplates&utm_campaign=Badge_Grade_Dashboard)
 [![build](https://github.com/zw627/react-redux-typescript-sass-boilerplates/workflows/build/badge.svg)](https://github.com/zw627/react-redux-typescript-sass-boilerplates/actions?query=workflow%3Abuild)
 [![codecov](https://codecov.io/gh/zw627/react-redux-typescript-sass-boilerplates/branch/master/graph/badge.svg?token=OsVLx0rz4f)](https://codecov.io/gh/zw627/react-redux-typescript-sass-boilerplates)
 [![CodeFactor](https://www.codefactor.io/repository/github/zw627/react-redux-typescript-sass-boilerplates/badge)](https://www.codefactor.io/repository/github/zw627/react-redux-typescript-sass-boilerplates)
