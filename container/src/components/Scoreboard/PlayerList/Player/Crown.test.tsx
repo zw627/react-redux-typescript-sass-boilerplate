@@ -4,13 +4,15 @@ import { Store } from "redux";
 import { mount, ReactWrapper } from "enzyme";
 
 import Crown from "Components/Scoreboard/PlayerList/Player/Crown";
-import { CrownProps } from "Containers/Scoreboard/PlayerList/Player/Crown";
 import { setupStore } from "Utils/testUtils";
 import { playerListSelector, scoreListSelector } from "Utils/selectors";
 
+import { AppState } from "Store/index";
+import { CrownProps } from "Containers/Scoreboard/PlayerList/Player/Crown";
+
 // Pass down the props from mock store to wrapper
 function setupProps(
-  state = setupStore().getState(),
+  state = setupStore().getState() as AppState,
   index: number
 ): CrownProps {
   const score = playerListSelector(state)[index].score;
@@ -28,7 +30,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Crown {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Crown", () => {
@@ -40,9 +42,9 @@ describe("Scoreboard/Crown", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should have "crown" class by default', () => {
     expect(wrapper.find("svg.crown").length).toEqual(1);

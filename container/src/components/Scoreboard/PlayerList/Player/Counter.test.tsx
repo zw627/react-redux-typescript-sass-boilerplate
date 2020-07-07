@@ -5,16 +5,18 @@ import mockdate from "mockdate";
 
 import { update } from "Store/scoreboard/player/actions";
 import Counter from "Components/Scoreboard/PlayerList/Player/Counter";
-import { CounterProps } from "Containers/Scoreboard/PlayerList/Player/Counter";
 import { setupStore } from "Utils/testUtils";
 import { playerListSelector } from "Utils/selectors";
+
+import { AppState } from "Store/index";
+import { CounterProps } from "Containers/Scoreboard/PlayerList/Player/Counter";
 
 jest.mock("Store/scoreboard/player/actions");
 mockdate.set(1576071902);
 const fakeDate = "1/19/1970";
 
 // Pass down the props from mock store to wrapper
-function setupProps(state = setupStore().getState()): CounterProps {
+function setupProps(state = setupStore().getState() as AppState): CounterProps {
   const { id, score } = playerListSelector(state)[0];
   return { id, score, update };
 }
@@ -27,7 +29,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Counter {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Counter", () => {
@@ -38,9 +40,9 @@ describe("Scoreboard/Counter", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display score", () => {
     // The player at index 0 from setupStore() has a score of 10

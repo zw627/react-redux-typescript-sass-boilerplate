@@ -12,7 +12,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <NotificationStorage {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("NotificationStorage", () => {

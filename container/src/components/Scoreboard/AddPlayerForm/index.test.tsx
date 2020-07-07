@@ -16,7 +16,7 @@ function setupWrapper(mockStore = setupStore(), props = { add }): ReactWrapper {
     <Provider store={mockStore}>
       <AddPlayerForm {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/AddPlayerForm", () => {
@@ -27,9 +27,9 @@ describe("Scoreboard/AddPlayerForm", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should handle <input> onChange", () => {
     wrapper

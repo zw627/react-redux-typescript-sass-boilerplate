@@ -6,16 +6,20 @@ import mockdate from "mockdate";
 
 import { tick, toggle, reset } from "Store/scoreboard/stopwatch/actions";
 import Stopwatch from "Components/Scoreboard/Header/Stopwatch";
-import { StopwatchProps } from "Containers/Scoreboard/Header/Stopwatch";
 import { setupStore } from "Utils/testUtils";
 import { isRunningSelector, elaspedTimeSelector } from "Utils/selectors";
+
+import { AppState } from "Store/index";
+import { StopwatchProps } from "Containers/Scoreboard/Header/Stopwatch";
 
 jest.mock("Store/scoreboard/stopwatch/actions");
 jest.useFakeTimers();
 mockdate.set(1574086940640);
 
 // Pass down the props from mock store to wrapper
-function setupProps(state = setupStore().getState()): StopwatchProps {
+function setupProps(
+  state = setupStore().getState() as AppState
+): StopwatchProps {
   return {
     isRunning: isRunningSelector(state),
     elapsedTime: elaspedTimeSelector(state),
@@ -33,7 +37,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Stopwatch {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Stopwatch", () => {
@@ -45,9 +49,9 @@ describe("Scoreboard/Stopwatch", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should display time in "m:s.ms" format', () => {
     expect(wrapper.find("div.stopwatch-time").length).toEqual(1);

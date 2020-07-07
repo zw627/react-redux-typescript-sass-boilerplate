@@ -5,10 +5,12 @@ import { mount, ReactWrapper } from "enzyme";
 import Stats from "Components/Scoreboard/Header/Stats";
 import { setupStore, multiToEqual } from "Utils/testUtils";
 import { playerCountSelector, scoreCountSelector } from "Utils/selectors";
+
+import { AppState } from "Store/index";
 import { StatsProps } from "Containers/Scoreboard/Header/Stats";
 
 // Pass down the props from mock store to wrapper
-function setupProps(state = setupStore().getState()): StatsProps {
+function setupProps(state = setupStore().getState() as AppState): StatsProps {
   return {
     playerCount: playerCountSelector(state),
     scoreCount: scoreCountSelector(state),
@@ -23,7 +25,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Stats {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Stats", () => {
@@ -34,10 +36,11 @@ describe("Scoreboard/Stats", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
+  /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "multiToEqual"] }] */
   it("should display player and point count", () => {
     function mapRowColumns(index: number): string[] {
       return wrapper

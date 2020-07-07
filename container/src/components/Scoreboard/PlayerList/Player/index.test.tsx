@@ -5,14 +5,16 @@ import { mount, ReactWrapper } from "enzyme";
 
 import { remove, select } from "Store/scoreboard/player/actions";
 import Player from "Components/Scoreboard/PlayerList/Player/index";
-import { PlayerProps } from "Containers/Scoreboard/PlayerList/Player";
 import { setupStore, matchMultiLength } from "Utils/testUtils";
 import { playerListSelector } from "Utils/selectors";
+
+import { AppState } from "Store/index";
+import { PlayerProps } from "Containers/Scoreboard/PlayerList/Player";
 
 jest.mock("Store/scoreboard/player/actions");
 
 // Pass down the props from mock store to wrapper
-function setupProps(state = setupStore().getState()): PlayerProps {
+function setupProps(state = setupStore().getState() as AppState): PlayerProps {
   const { id, name, isSelected } = playerListSelector(state)[0];
   return {
     index: 0,
@@ -32,7 +34,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Player {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Player", () => {
@@ -44,9 +46,9 @@ describe("Scoreboard/Player", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display player name", () => {
     // Name of the player at index 0, because we passed 0 to setupWrapper
@@ -76,6 +78,7 @@ describe("Scoreboard/Player", () => {
       ],
     });
     wrapper = setupWrapper(mockStore);
+    /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "matchMultiLength"] }] */
     matchMultiLength(wrapper, [
       ["div.player.player-selected", 1],
       ["a.remove-player.remove-player-selected", 1],
