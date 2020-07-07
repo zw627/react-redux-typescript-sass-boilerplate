@@ -9,13 +9,18 @@ import { setupStore } from "Utils/testUtils";
 
 mockdate.set(1576071902);
 const fakeDate = "1/19/1970";
+jest.mock("uuid", () => {
+  return {
+    v4: jest.fn(() => "43802ca3-f4e1-4233-a101-eea29eeaf388"),
+  };
+});
 
 function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
   return mount(
     <Provider store={mockStore}>
       <AddPlayerForm {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/AddPlayerForm", () => {
@@ -29,9 +34,9 @@ describe("Scoreboard/AddPlayerForm", () => {
     wrapper = setupWrapper(mockStore, {});
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should handle <input> onChange", () => {
     wrapper
@@ -52,7 +57,7 @@ describe("Scoreboard/AddPlayerForm", () => {
     expect(mockStore.dispatch).toHaveBeenCalledWith({
       type: "player/add",
       payload: {
-        id: expect.any(String),
+        id: "43802ca3-f4e1-4233-a101-eea29eeaf388",
         name: "Hello W",
         date: fakeDate,
       },

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { AppState } from "Store/index";
 import { scoreCountSelector, playerCountSelector } from "Utils/selectors";
 
-const Stats: React.FC<{}> = () => {
+const Stats: React.FC<Record<string, unknown>> = () => {
   // State (redux)
   const scoreCount = useSelector((state: AppState) =>
     scoreCountSelector(state)

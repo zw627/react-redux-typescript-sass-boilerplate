@@ -4,12 +4,16 @@ import { Store } from "redux";
 import { mount, ReactWrapper } from "enzyme";
 
 import PlayerDetail from "Components/Scoreboard/PlayerDetail/";
-import { PlayerDetaiProps } from "Containers/Scoreboard/PlayerDetail";
 import { setupStore, matchMultiLength, multiToEqual } from "Utils/testUtils";
 import { playerDetailSelector } from "Utils/selectors";
 
+import { AppState } from "Store/index";
+import { PlayerDetaiProps } from "Containers/Scoreboard/PlayerDetail";
+
 // Pass down the props from mock store to wrapper
-function setupProps(state = setupStore().getState()): PlayerDetaiProps {
+function setupProps(
+  state = setupStore().getState() as AppState
+): PlayerDetaiProps {
   return {
     player: playerDetailSelector(state),
   };
@@ -23,7 +27,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <PlayerDetail {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/PlayerDetail", () => {
@@ -35,9 +39,9 @@ describe("Scoreboard/PlayerDetail", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display tips by default", () => {
     expect(wrapper.find("p").at(0).text()).toEqual(

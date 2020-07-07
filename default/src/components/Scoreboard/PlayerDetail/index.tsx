@@ -5,7 +5,7 @@ import { AppState } from "Store/index";
 import ThemeSwitch from "./ThemeSwitch";
 import { playerDetailSelector } from "Utils/selectors";
 
-const PlayerDetail: React.FC<{}> = () => {
+const PlayerDetail: React.FC<Record<string, unknown>> = () => {
   // State (redux)
   const player = useSelector((state: AppState) => playerDetailSelector(state));
 

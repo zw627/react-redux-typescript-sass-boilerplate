@@ -10,6 +10,7 @@ import { StopwatchActions } from "Store/scoreboard/stopwatch/actions";
 mockdate.set(1574086940640);
 
 describe("scoreboard/stopwatchReducer", () => {
+  /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "handleStopwatchTest"] }] */
   const handleStopwatchTest = (
     action: AnyAction,
     [isRunning, previousTime, elapsedTime]: [boolean, number, number],

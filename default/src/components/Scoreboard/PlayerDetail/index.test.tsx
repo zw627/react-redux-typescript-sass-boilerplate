@@ -11,7 +11,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <PlayerDetail {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/PlayerDetail", () => {
@@ -25,9 +25,9 @@ describe("Scoreboard/PlayerDetail", () => {
     wrapper = setupWrapper(mockStore, {});
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display tips by default", () => {
     expect(wrapper.find("p").at(0).text()).toEqual(

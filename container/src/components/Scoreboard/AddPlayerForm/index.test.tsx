@@ -10,13 +10,18 @@ import { setupStore } from "Utils/testUtils";
 jest.mock("Store/scoreboard/player/actions");
 mockdate.set(1576071902);
 const fakeDate = "1/19/1970";
+jest.mock("uuid", () => {
+  return {
+    v4: jest.fn(() => "43802ca3-f4e1-4233-a101-eea29eeaf388"),
+  };
+});
 
 function setupWrapper(mockStore = setupStore(), props = { add }): ReactWrapper {
   return mount(
     <Provider store={mockStore}>
       <AddPlayerForm {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/AddPlayerForm", () => {
@@ -27,9 +32,9 @@ describe("Scoreboard/AddPlayerForm", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should handle <input> onChange", () => {
     wrapper
@@ -47,7 +52,11 @@ describe("Scoreboard/AddPlayerForm", () => {
         // do nothing.
       },
     });
-    expect(add).toHaveBeenCalledWith(expect.any(String), "Hello W", fakeDate);
+    expect(add).toHaveBeenCalledWith(
+      "43802ca3-f4e1-4233-a101-eea29eeaf388",
+      "Hello W",
+      fakeDate
+    );
     expect(add).toHaveBeenCalledTimes(1);
   });
 });

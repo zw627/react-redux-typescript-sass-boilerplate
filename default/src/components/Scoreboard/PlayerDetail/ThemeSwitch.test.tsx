@@ -11,7 +11,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <ThemeSwitch {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/ThemeSwitch", () => {
@@ -25,9 +25,9 @@ describe("Scoreboard/ThemeSwitch", () => {
     wrapper = setupWrapper(mockStore);
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should display "Dark" by default', () => {
     expect(wrapper.find("button").at(0).text()).toEqual("Dark");
