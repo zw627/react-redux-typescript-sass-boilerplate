@@ -11,7 +11,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <Stats {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Stats", () => {
@@ -24,9 +24,9 @@ describe("Scoreboard/Stats", () => {
     wrapper = setupWrapper(mockStore, {});
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display player and point count", () => {
     function mapRowColumns(index: number): string[] {
@@ -38,6 +38,7 @@ describe("Scoreboard/Stats", () => {
     }
     const firstRowColumns = mapRowColumns(0);
     const secondRowColumns = mapRowColumns(1);
+    /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "multiToEqual"] }] */
     multiToEqual([
       [firstRowColumns.length, 2],
       [firstRowColumns[0], "Players:"],

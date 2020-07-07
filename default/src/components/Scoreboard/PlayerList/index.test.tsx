@@ -10,7 +10,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <PlayerList {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/PlayerList", () => {
@@ -22,7 +22,6 @@ describe("Scoreboard/PlayerList", () => {
   });
 
   test("compare to the last snapshot", () => {
-    // expect(wrapper).toMatchSnapshot();
-    expect(wrapper);
+    expect(wrapper).toMatchSnapshot();
   });
 });

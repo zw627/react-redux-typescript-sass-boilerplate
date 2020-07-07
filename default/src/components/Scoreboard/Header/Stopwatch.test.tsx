@@ -15,7 +15,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <Stopwatch {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Stopwatch", () => {
@@ -29,9 +29,9 @@ describe("Scoreboard/Stopwatch", () => {
     wrapper = setupWrapper(mockStore, {});
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should display time in "m:s.ms" format', () => {
     expect(wrapper.find("div.stopwatch-time").length).toEqual(1);

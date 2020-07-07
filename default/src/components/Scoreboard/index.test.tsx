@@ -13,7 +13,7 @@ function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
     <Provider store={mockStore}>
       <Scoreboard {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard", () => {

@@ -14,7 +14,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Player {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Player", () => {
@@ -28,9 +28,9 @@ describe("Scoreboard/Player", () => {
     wrapper = setupWrapper(mockStore);
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("should display player name", () => {
     // Name of the player at index 0, because we passed 0 to setupWrapper
@@ -60,6 +60,7 @@ describe("Scoreboard/Player", () => {
       ],
     });
     wrapper = setupWrapper(mockStore);
+    /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "matchMultiLength"] }] */
     matchMultiLength(wrapper, [
       ["div.player.player-selected", 1],
       ["a.remove-player.remove-player-selected", 1],

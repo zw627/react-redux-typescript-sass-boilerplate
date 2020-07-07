@@ -14,7 +14,7 @@ function setupWrapper(
     <Provider store={mockStore}>
       <Crown {...props} />
     </Provider>
-  );
+  ) as ReactWrapper;
 }
 
 describe("Scoreboard/Crown", () => {
@@ -26,9 +26,9 @@ describe("Scoreboard/Crown", () => {
     wrapper = setupWrapper();
   });
 
-  // test("compare to the last snapshot", () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  test("compare to the last snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should have "crown" class by default', () => {
     expect(wrapper.find("svg.crown").length).toEqual(1);

@@ -5,7 +5,7 @@ import { AppState } from "Store/index";
 import toggleBodyClass from "Utils/toggleBodyClass";
 import { isLightModeSelector } from "Utils/selectors";
 
-const ThemeSwitch: React.FC<{}> = () => {
+const ThemeSwitch: React.FC<Record<string, unknown>> = () => {
   // State (redux)
   const isLightMode = useSelector((state: AppState) =>
     isLightModeSelector(state)

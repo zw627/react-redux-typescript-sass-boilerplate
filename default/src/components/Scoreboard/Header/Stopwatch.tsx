@@ -5,7 +5,7 @@ import { AppState } from "Store/index";
 import formatTime from "Utils/formatTime";
 import { isRunningSelector, elaspedTimeSelector } from "Utils/selectors";
 
-const Stopwatch: React.FC<{}> = () => {
+const Stopwatch: React.FC<Record<string, unknown>> = () => {
   // State (redux)
   const isRunning = useSelector((state: AppState) => isRunningSelector(state));
   const elapsedTime = useSelector((state: AppState) =>
