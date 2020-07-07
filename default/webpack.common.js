@@ -66,8 +66,11 @@ module.exports = {
       // Analyze project structure and size of each chunk
       new BundleAnalyzerPlugin({
         // Static mode
-        analyzerMode: "static",        // Generate a HTML file with bundle report
-        reportFilename: path.resolve(__dirname, "coverage/webpack-bundle-analyzer/report.html")
+        analyzerMode: "static", // Generate a HTML file with bundle report
+        reportFilename: path.resolve(
+          __dirname,
+          "coverage/webpack-bundle-analyzer/report.html"
+        ),
 
         // Server mode
         // analyzerMode: "server",     // Start a HTTP server to show bundle report
