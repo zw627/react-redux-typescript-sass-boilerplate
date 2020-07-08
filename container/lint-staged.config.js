@@ -1,56 +1,46 @@
 const path = require("path");
 
-// Convert aboslute path to relative
+// Convert aboslute paths to relative ones
 function toRelative(absolutePaths) {
   const cwd = process.cwd();
   return absolutePaths.map((file) => path.relative(cwd, file));
 }
 
-// Change comma to space
-// Pass the 2nd argument "relative" to convert to relative path
-function joinBySpace(absolutePaths, conversion = "relative") {
-  if (conversion === "relative") {
-    const relativePaths = toRelative(absolutePaths);
-    return relativePaths.join(" ");
-  }
-  return absolutePaths.join(" ");
+// Replace all backslashes (\) with forward-slashes (/)
+function toForwardSlashes(absolutePaths) {
+  return absolutePaths.map((filePath) => filePath.replace(/[\\]/g, "/"));
 }
 
-// Change comma to space
 // Pass the 2nd argument "relative" to convert to relative path
-// Change all backslash (\) to forward slash (/)
-function toForwardSlash(absolutePaths, conversion = "relative") {
+function transformPaths(absolutePaths, conversion = "relative") {
   if (conversion === "relative") {
-    const relativePaths = toRelative(absolutePaths);
-    return relativePaths
-      .map((filePath) => filePath.replace(/[\\]/g, "/"))
-      .join(" ");
+    // Change commas to spaces
+    return toForwardSlashes(toRelative(absolutePaths)).join(" ");
   }
-  return absolutePaths
-    .map((filePath) => filePath.replace(/[\\]/g, "/"))
-    .join(" ");
+  // Change commas to spaces
+  return toForwardSlashes(absolutePaths).join(" ");
 }
 
 module.exports = {
   // Stylelint
   "*.(html|css|scss|sass|md)": (absolutePaths) =>
-    `stylelint --fix ${toForwardSlash(absolutePaths, "relative")}`,
+    `stylelint --fix ${transformPaths(absolutePaths, "relative")}`,
 
   // TypeScript
   "*.(ts|tsx)": () => "tsc -p tsconfig.json --noEmit --skipLibCheck",
 
   // ESLint (use same regex as Jest will not work)
   "*.(j|t)s(x)?": (absolutePaths) =>
-    `eslint --fix ${toForwardSlash(absolutePaths, "relative")}`,
+    `eslint --fix ${transformPaths(absolutePaths, "relative")}`,
 
   // Jest
   "*.(js|jsx|ts|tsx)": (absolutePaths) =>
-    `jest --bail --findRelatedTests ${toForwardSlash(
+    `jest --bail --findRelatedTests ${transformPaths(
       absolutePaths,
       "relative"
     )}`,
 
   // Prettier
   "*.(html|css|scss|js|jsx|ts|tsx|json|md)": (absolutePaths) =>
-    `prettier --write ${toForwardSlash(absolutePaths, "relative")}`,
+    `prettier --write ${transformPaths(absolutePaths, "relative")}`,
 };
