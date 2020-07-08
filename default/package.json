@@ -12,7 +12,7 @@
     "watch": "webpack --watch",
     "test": "jest --coverage",
     "test-watch": "npm test -- --watch",
-    "lint": "stylelint \"**/*.{html,css,scss,sass,md}\" --fix && eslint . --ext .js,.jsx,.ts,.tsx --fix && tsc --noEmit --project tsconfig.json --skipLibCheck && prettier --write \"**/*.{html,css,scss,js,jsx,ts,tsx,json,md}\""
+    "lint": "stylelint --fix \"**/*.{html,css,scss,sass,md}\" && eslint --fix . && tsc --noEmit --project tsconfig.json --skipLibCheck && prettier --write ."
   },
   "husky": {
     "hooks": {

@@ -9,5 +9,6 @@ coverage
 dist
 build
 
-# TypeScript config
+# Config
 tsconfig.json
+.eslintrc
