@@ -1,10 +1,10 @@
-name: build
+name: demos
 
 on: [push]
 
 jobs:
-  # react-redux-typescript-sass-boilerplates/default
-  default:
+  # react-redux-typescript-sass-boilerplates/demo
+  demo:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -33,13 +33,13 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./default
+        working-directory: ./demo
 
     env:
       CI: true
 
-  # react-redux-typescript-sass-boilerplates/container
-  container:
+  # react-redux-typescript-sass-boilerplates/demo-container-pattern
+  demo-container:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -68,7 +68,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./container
+        working-directory: ./demo-container-pattern
 
     env:
       CI: true
