@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scoreboard/Header compare to the last snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Header>
+    <div
+      className="header"
+    >
+      <Stats>
+        <table
+          className="stats"
+        >
+          <tbody>
+            <tr>
+              <td>
+                Players:
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Total Points:
+              </td>
+              <td>
+                14
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </Stats>
+      <h1>
+        Scoreboard
+      </h1>
+      <Stopwatch>
+        <div
+          className="stopwatch"
+        >
+          <h2>
+            Stopwatch
+          </h2>
+          <div
+            className="stopwatch-time"
+          >
+            00:00.00
+          </div>
+          <button
+            onClick={[Function]}
+          >
+            Start
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Reset
+          </button>
+        </div>
+      </Stopwatch>
+    </div>
+  </Header>
+</Provider>
+`;

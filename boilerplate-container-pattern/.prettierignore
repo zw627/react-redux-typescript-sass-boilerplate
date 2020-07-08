@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+bower_components
+
+# Testing
+coverage
+
+# Production (build, distribution)
+dist
+build
+
+# Config
+tsconfig.json
+.eslintrc

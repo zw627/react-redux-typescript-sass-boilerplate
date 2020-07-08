@@ -1,0 +1,55 @@
+// --------------------------------------------- //
+
+.player-detail {
+  font-size: $font-size-secondary;
+  padding: 20px 24px;
+  padding-right: 0px;
+  position: relative;
+
+  #{$light-theme} & {
+    background: $color-theme-lightmode-2;
+  }
+}
+
+// --------------------------------------------- //
+
+.player-detail p {
+  color: $color-body-darkmode-2;
+  margin: 0;
+  user-select: none;
+
+  #{$light-theme} & {
+    color: $color-body-lightmode-2;
+  }
+}
+
+// --------------------------------------------- //
+
+.player-detail h3 {
+  font-size: $font-size-player-name;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-right: 84px;
+  word-break: break-word;
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  overflow: hidden;
+}
+
+// --------------------------------------------- //
+
+.player-detail table {
+  margin-left: -2px;
+}
+
+// --------------------------------------------- //
+
+.player-detail td:first-child {
+  color: $color-body-darkmode-2;
+  padding-right: 10px;
+
+  #{$light-theme} & {
+    color: $color-body-lightmode-2;
+  }
+}
+
+// --------------------------------------------- //

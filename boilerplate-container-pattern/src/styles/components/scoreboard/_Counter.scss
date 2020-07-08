@@ -1,0 +1,62 @@
+// --------------------------------------------- //
+
+.counter {
+  background: $color-theme-darkmode-2;
+  display: flex;
+  width: 185px;
+}
+
+#{$light-theme} .counter {
+  background: none;
+  color: $color-border-darkmode;
+}
+
+// --------------------------------------------- //
+
+.counter-action {
+  color: $color-body-darkmode-1;
+  font-size: $font-size-heading;
+  width: 50px;
+  padding: 19px;
+
+  #{$light-theme} & {
+    color: $color-body-darkmode-2;
+  }
+}
+
+// --------------------------------------------- //
+
+.counter-action.increment {
+  @include increment-effect-dark;
+  @include increment-effect-light;
+  background: $color-counter-increment;
+
+  #{$light-theme} & {
+    background: $color-body-darkmode-1;
+  }
+}
+
+// --------------------------------------------- //
+
+.counter-action.decrement {
+  @include decrement-effect-dark;
+  @include decrement-effect-light;
+  background: $color-counter-decrement;
+
+  #{$light-theme} & {
+    background: $color-body-darkmode-1;
+  }
+}
+
+// --------------------------------------------- //
+
+.counter-score {
+  font-family: $font-stack-number;
+  font-size: $font-size-number;
+  text-align: center;
+  align-self: center;
+  flex-grow: 1;
+  min-width: 85px;
+}
+
+// --------------------------------------------- //

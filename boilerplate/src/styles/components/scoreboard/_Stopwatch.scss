@@ -1,0 +1,52 @@
+// --------------------------------------------- //
+
+.stopwatch {
+  background: $color-theme-darkmode-1;
+  width: 185px;
+  height: 100%;
+}
+
+#{$light-theme} .stopwatch {
+  background: $color-theme-lightmode-2;
+}
+
+// --------------------------------------------- //
+
+.stopwatch h2 {
+  color: $color-body-darkmode-2;
+  font-size: $font-size-secondary;
+  margin: 0;
+  margin-top: 24px;
+}
+
+#{$light-theme} .stopwatch h2 {
+  color: $color-body-lightmode-2;
+}
+
+// --------------------------------------------- //
+
+.stopwatch-time {
+  font-family: $font-stack-number;
+  font-size: $font-size-number;
+  margin-top: 5px;
+}
+
+// --------------------------------------------- //
+
+.stopwatch button {
+  @include button-effect-dark;
+  @include button-effect-light;
+  color: $color-body-darkmode-2;
+  background: $color-theme-darkmode-2;
+  font-size: $font-size-secondary;
+  margin: 8px 5px;
+  border-radius: $border-radius-default;
+  padding: 9px 11px;
+
+  #{$light-theme} & {
+    background: $color-theme-lightmode-3;
+    color: $color-body-lightmode-2;
+  }
+}
+
+// --------------------------------------------- //
