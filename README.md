@@ -1,4 +1,4 @@
-# React-Redux-Typescript-Sass boilerplates
+# React-Redux-Typescript-Sass boilerplate
 
 ![boilerplate](https://github.com/zw627/react-redux-typescript-sass-boilerplates/workflows/boilerplate/badge.svg)
 ![demos](https://github.com/zw627/react-redux-typescript-sass-boilerplates/workflows/demos/badge.svg)
