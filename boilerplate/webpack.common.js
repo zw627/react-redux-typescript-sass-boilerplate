@@ -14,10 +14,6 @@ const paths = {
   public: path.resolve(__dirname, "public"),
   template: path.resolve(__dirname, "public/index.html"),
   entry: path.resolve(__dirname, "src/index.tsx"),
-  components: path.resolve(__dirname, "src/components"),
-  store: path.resolve(__dirname, "src/store"),
-  styles: path.resolve(__dirname, "src/styles"),
-  utils: path.resolve(__dirname, "src/utils"),
 };
 
 module.exports = {
@@ -31,10 +27,6 @@ module.exports = {
       // Path aliases, e.g. `../../store/index` => `Store/index`
       alias: {
         NodeModules: paths.nodeModules,
-        Components: paths.components,
-        Store: paths.store,
-        Styles: paths.styles,
-        Utils: paths.utils,
       },
       // Required, otherwise compiler returns module not found, cannot resolve
       extensions: [".tsx", ".ts", ".js", "jsx"],

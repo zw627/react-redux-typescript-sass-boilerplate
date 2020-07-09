@@ -81,12 +81,8 @@ module.exports = {
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
     "\\.(css|styl|less|sass|scss|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/src/utils/testStub.ts",
+      "<rootDir>/testStub.ts",
     "^NodeModules(.*)$": "<rootDir>/node_modules$1",
-    "^Components(.*)$": "<rootDir>/src/components$1",
-    "^Store(.*)$": "<rootDir>/src/store$1",
-    "^Styles(.*)$": "<rootDir>/src/styles$1",
-    "^Utils(.*)$": "<rootDir>/src/utils$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -132,7 +128,7 @@ module.exports = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["<rootDir>/src/utils/testSetup.ts"],
+  setupFilesAfterEnv: ["<rootDir>/testSetup.ts"],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   snapshotSerializers: ["enzyme-to-json/serializer"],
