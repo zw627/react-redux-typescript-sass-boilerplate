@@ -12,4 +12,4 @@
 [![dependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplates/status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplates?path=demo)
 [![devDependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplates/dev-status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplates?path=demo&type=dev)
 
-Boilerplates for React-Redux-TypeScript-Sass projects. Work in progress.
+A boilerplate for React-Redux-TypeScript-Sass projects. Work in progress.
