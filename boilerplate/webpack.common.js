@@ -1,34 +1,35 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
 
-// Centralize all paths for easy inspection and modification
-// Used by all webpack.*.js
+// Centralize all paths for easy inspection, used by all `webpack.*.js`
 const path = require("path");
 const paths = {
-  output: path.resolve(__dirname, "dist"),
   nodeModules: path.resolve(__dirname, "node_modules"),
+  output: path.resolve(__dirname, "dist"),
+  coverage: path.resolve(__dirname, "coverage"),
   public: path.resolve(__dirname, "public"),
   template: path.resolve(__dirname, "public/index.html"),
   entry: path.resolve(__dirname, "src/index.tsx"),
 };
 
 module.exports = {
+  // Export paths for other `webpack.*.js` to use
   paths,
+
+  // Webpack config
   config: {
+    // Entry point (e.g. `src/index.tsx`)
     entry: {
       index: paths.entry,
     },
 
     resolve: {
-      // Path aliases, e.g. `../../store/index` => `Store/index`
+      // Path aliases (e.g. `../../node_modules/jest` can be imported as `NodeModules/jest`)
       alias: {
         NodeModules: paths.nodeModules,
       },
-      // Required, otherwise compiler returns module not found, cannot resolve
+      // Required, otherwise compiler returns module not found and cannot resolve
       extensions: [".tsx", ".ts", ".js", "jsx"],
     },
 
@@ -41,35 +42,6 @@ module.exports = {
         template: paths.template,
         filename: "index.html",
       }),
-
-      // Copy files inside `public` to the output folder, useful for static assets like favicon
-      // This imitates the similar behavior of create-react-app
-      new CopyPlugin({
-        patterns: [
-          {
-            from: paths.public,
-            globOptions: {
-              ignore: ["*.html"],
-            },
-          },
-        ],
-      }),
-
-      // Analyze project structure and size of each chunk
-      new BundleAnalyzerPlugin({
-        // Static mode
-        analyzerMode: "static", // Generate a HTML file with bundle report
-        reportFilename: path.resolve(
-          __dirname,
-          "coverage/webpack-bundle-analyzer/report.html"
-        ),
-
-        // Server mode
-        // analyzerMode: "server",     // Start a HTTP server to show bundle report
-        // analyzerHost: "127.0.0.1",  // http://localhost
-        // analyzerPort: 8888,         // http://localhost:8888
-        // openAnalyzer: true,         // Open automatically on every run
-      }),
     ],
 
     optimization: {
@@ -78,10 +50,8 @@ module.exports = {
         cacheGroups: {
           commons: {
             test: /[\\/]node_modules[\\/]/,
-            // Place all codes from 3rd-party inside `vendor.js`
-            name: "vendor",
-            // `all`, `async`, or `initial`, see https://webpack.js.org/plugins/split-chunks-plugin/
-            chunks: "all",
+            name: "vendor", // Place all codes from 3rd-party inside `vendor.js`
+            chunks: "all", // https://webpack.js.org/plugins/split-chunks-plugin/#splitchunkschunks
           },
         },
       },
@@ -108,14 +78,12 @@ module.exports = {
                     corejs: { version: 3, proposals: true },
                   },
                 ],
-                // https://babeljs.io/docs/en/babel-preset-typescript
-                "@babel/preset-typescript",
-                // https://babeljs.io/docs/en/babel-preset-react
-                "@babel/preset-react",
+                "@babel/preset-typescript", // https://babeljs.io/docs/en/babel-preset-typescript
+                "@babel/preset-react", // https://babeljs.io/docs/en/babel-preset-react
               ],
-              // Hot Module Replacement (HMR) allows modules to be updated at runtime without a full refresh
-              // Warning: `react-hot-loader` is expected to be replaced by `React Fast Refresh`, but currently Webpack only support the former (2019-12-24)
-              // https://github.com/gaearon/react-hot-loader
+
+              // `react-hot-loader` is expected to be replaced by `react-fast-refresh`
+              // https://github.com/gaearon/react-hot-loader#moving-towards-next-step
               plugins: ["react-hot-loader/babel"],
             },
           },
