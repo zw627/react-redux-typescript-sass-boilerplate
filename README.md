@@ -1,5 +1,6 @@
 # React-Redux-Typescript-Sass boilerplate
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2a76d2f951f249c58049db243bda52f7)](https://app.codacy.com/manual/zw627/react-redux-typescript-sass-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=zw627/react-redux-typescript-sass-boilerplate&utm_campaign=Badge_Grade_Dashboard)
 [![boilerplate](https://github.com/zw627/react-redux-typescript-sass-boilerplate/workflows/boilerplate/badge.svg)](https://github.com/zw627/react-redux-typescript-sass-boilerplate/actions?query=workflow%3Aboilerplate)
 [![demos](https://github.com/zw627/react-redux-typescript-sass-boilerplate/workflows/demos/badge.svg)](https://github.com/zw627/react-redux-typescript-sass-boilerplate/actions?query=workflow%3Ademos)
 
