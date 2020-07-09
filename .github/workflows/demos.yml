@@ -21,7 +21,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
     - name: Install Dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
     - name: Run Tests
       run: yarn test
     - name: Build
@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
     - name: Install Dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
     - name: Run Tests
       run: yarn test
     - name: Build
