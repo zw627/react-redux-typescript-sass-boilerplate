@@ -12,8 +12,6 @@
 [![known vulnerabilities](https://snyk.io/test/github/zw627/react-redux-typescript-sass-boilerplate/badge.svg?targetFile=demo/package.json)](https://snyk.io/test/github/zw627/react-redux-typescript-sass-boilerplate?targetFile=demo/package.json)
 [![dependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo)
 [![devDependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/dev-status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo&type=dev)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fa55b574-f1bd-46b2-b211-dfd7f29464cb/deploy-status)](https://app.netlify.com/sites/boilerplate-demo/deploys)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5c773f4a-240c-4851-8c9c-177feec3e599/deploy-status)](https://app.netlify.com/sites/boilerplate-demo-container/deploys)
 
 ## Description
 
