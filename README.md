@@ -2,10 +2,8 @@
 
 [![boilerplate](https://github.com/zw627/react-redux-typescript-sass-boilerplate/workflows/boilerplate/badge.svg)](https://github.com/zw627/react-redux-typescript-sass-boilerplate/actions?query=workflow%3Aboilerplate)
 [![demos](https://github.com/zw627/react-redux-typescript-sass-boilerplate/workflows/demos/badge.svg)](https://github.com/zw627/react-redux-typescript-sass-boilerplate/actions?query=workflow%3Ademos)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fa55b574-f1bd-46b2-b211-dfd7f29464cb/deploy-status)](https://app.netlify.com/sites/boilerplate-demo/deploys)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5c773f4a-240c-4851-8c9c-177feec3e599/deploy-status)](https://app.netlify.com/sites/boilerplate-demo-container/deploys)
-
 [![codecov](https://codecov.io/gh/zw627/react-redux-typescript-sass-boilerplate/branch/master/graph/badge.svg?token=OsVLx0rz4f)](https://codecov.io/gh/zw627/react-redux-typescript-sass-boilerplate)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/291169822ae55941deee/maintainability)](https://codeclimate.com/github/zw627/react-redux-typescript-sass-boilerplate/maintainability)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d2cfda1b5ff4474ab062f658849efac)](https://www.codacy.com/manual/zw627/react-redux-typescript-sass-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zw627/react-redux-typescript-sass-boilerplate&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/zw627/react-redux-typescript-sass-boilerplate/badge)](https://www.codefactor.io/repository/github/zw627/react-redux-typescript-sass-boilerplate)
