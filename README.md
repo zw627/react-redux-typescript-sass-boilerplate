@@ -13,10 +13,17 @@
 [![dependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo)
 [![devDependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/dev-status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo&type=dev)
 
-A boilerplate and demos of various patterns for React-Redux-TypeScript-Sass projects:
+**A boilerplate and demos of various patterns for React-Redux-TypeScript-Sass projects:**
 
-- Click [`demo`](https://boilerplate-demo.netlify.app) to test the demo that follows the natural flow of the brand new [Redux Toolkit](https://github.com/reduxjs/redux-toolkit) and [React-Redux Hooks](https://react-redux.js.org/api/hooks).
-- Click [`demo-container-pattern`](https://boilerplate-demo-container.netlify.app) to test the demo that uses the most traditional ["Presentational and Container Components"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern proposed by Dan Abramov.
+- Click [`demo`](https://boilerplate-demo.netlify.app) to test the demo that follows the natural flow of the brand new Redux Toolkit and React-Redux Hooks.
+- Click [`demo-container-pattern`](https://boilerplate-demo-container.netlify.app) to test the demo that uses the most traditional "Presentational and Container Components" pattern proposed by Dan Abramov.
 - `boilerplate` is the boileplate that matches the `demo` with minimal number of files inside the `src` folder.
 
-[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) are recommended when comparing how [`demo`](https://boilerplate-demo.netlify.app) and [`demo-container-pattern`](https://boilerplate-demo-container.netlify.app) differs in their behaviors.
+React Developer Tools and Redux DevTools are recommended when comparing how `demo` and `demo-container-pattern` differs in their behaviors.
+
+**Links:**
+- [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
+- [React-Redux Hooks](https://react-redux.js.org/api/hooks)
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools)
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools)
