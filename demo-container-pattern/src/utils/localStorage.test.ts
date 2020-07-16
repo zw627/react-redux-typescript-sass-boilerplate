@@ -27,13 +27,18 @@ describe("store/localStorage", () => {
     saveStateToLocal(state);
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(localStorage.setItem).toHaveBeenCalledWith(
-      "state",
+      "boilerplate-demo-container",
       stringifiedState
     );
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    expect(localStorage.__STORE__["state"]).toEqual(stringifiedState);
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    expect(localStorage.__STORE__["version"]).toEqual("0.1");
+    expect(localStorage.__STORE__["boilerplate-demo-container"]).toEqual(
+      stringifiedState
+    );
+
+    expect(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      localStorage.__STORE__["boilerplate-demo-container-version"]
+    ).toEqual("0.1");
     expect(Object.keys(localStorage.__STORE__).length).toEqual(2);
   });
 
@@ -46,8 +51,8 @@ describe("store/localStorage", () => {
   });
 
   it("should clear localStorage if version does not match", () => {
-    localStorage.setItem("state", stringifiedState);
-    localStorage.setItem("version", "0.0.1");
+    localStorage.setItem("boilerplate-demo-container", stringifiedState);
+    localStorage.setItem("boilerplate-demo-container-version", "0.0.1");
     loadStateFromLocal();
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(localStorage.getItem).toHaveBeenCalledTimes(2);

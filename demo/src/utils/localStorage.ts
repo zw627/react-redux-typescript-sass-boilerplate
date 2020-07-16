@@ -15,8 +15,8 @@ export function checkLocalStorage(): boolean {
 
 export function loadStateFromLocal(): Record<string, unknown> | undefined {
   try {
-    const serializedState = localStorage.getItem("state");
-    const stateVersion = localStorage.getItem("version");
+    const serializedState = localStorage.getItem("boilerplate-demo");
+    const stateVersion = localStorage.getItem("boilerplate-demo-version");
     // return undefined if no state or the state is legacy
     if (serializedState === null || stateVersion !== "0.1") {
       localStorage.clear();
@@ -32,8 +32,8 @@ export function loadStateFromLocal(): Record<string, unknown> | undefined {
 export function saveStateToLocal(state: AppState): void {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem("state", serializedState);
-    localStorage.setItem("version", "0.1");
+    localStorage.setItem("boilerplate-demo", serializedState);
+    localStorage.setItem("boilerplate-demo-version", "0.1");
   } catch (err) {
     return undefined;
   }
