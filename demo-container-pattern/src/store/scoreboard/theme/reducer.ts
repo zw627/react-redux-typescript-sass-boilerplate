@@ -6,7 +6,7 @@ export const initializeState = (isLightMode: boolean): ThemeState => ({
   isLightMode,
 });
 
-export const initialState = initializeState(false);
+export const initialState = initializeState(true);
 
 const themeReducer = (
   state = initialState,
