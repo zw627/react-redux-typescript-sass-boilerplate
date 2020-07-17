@@ -30,3 +30,6 @@
 - [React-Redux Hooks](https://react-redux.js.org/api/hooks)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools)
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+
+![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)
+
