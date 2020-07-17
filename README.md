@@ -23,7 +23,7 @@
 
 *[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools) and [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools) are recommended when comparing how `demo` and `demo-container-pattern` differs in their behaviors.*
 
-![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)
+[![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com/)
 
 ## Highlights
 
