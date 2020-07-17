@@ -31,7 +31,7 @@ module.exports = {
 
   // ESLint (use same regex as Jest will not work)
   "*.(j|t)s(x)?": (absolutePaths) =>
-    `eslint --fix ${transformPaths(absolutePaths, "relative")}`,
+    `eslint --fix --max-warnings=0 ${transformPaths(absolutePaths, "relative")}`,
 
   // Jest
   "*.(js|jsx|ts|tsx)": (absolutePaths) =>
