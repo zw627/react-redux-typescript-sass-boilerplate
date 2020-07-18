@@ -1,3 +1,8 @@
+// Import path aliases from TypeScript compiler automatically
+// https://kulshekhar.github.io/ts-jest/user/config/#jest-config-with-helper
+const { pathsToModuleNameMapper } = require("ts-jest/utils");
+const { compilerOptions } = require("./tsconfig.json");
+
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
@@ -80,13 +85,9 @@ module.exports = {
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: "<rootDir>/" }),
     "\\.(css|styl|less|sass|scss|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/src/utils/testStub.ts",
-    "^NodeModules(.*)$": "<rootDir>/node_modules$1",
-    "^Components(.*)$": "<rootDir>/src/components$1",
-    "^Store(.*)$": "<rootDir>/src/store$1",
-    "^Styles(.*)$": "<rootDir>/src/styles$1",
-    "^Utils(.*)$": "<rootDir>/src/utils$1",
+      "<rootDir>/testStub.ts",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -99,7 +100,8 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: null,
+  // https://kulshekhar.github.io/ts-jest/user/config/
+  preset: "ts-jest/presets/default",
 
   // Run tests from one or more projects
   // projects: null,
@@ -123,7 +125,7 @@ module.exports = {
   // rootDir: null,
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: ["<rootDir>"],
+  // roots: ["<rootDir>"],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -132,13 +134,13 @@ module.exports = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["<rootDir>/src/utils/testSetup.ts"],
+  setupFilesAfterEnv: ["<rootDir>/testSetup.ts"],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   snapshotSerializers: ["enzyme-to-json/serializer"],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  // testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -147,7 +149,7 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
+  // testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -170,9 +172,7 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  transform: {
-    "^.+\\.(t|j)sx?$": "ts-jest",
-  },
+  // transform: {"^.+\\.[jt]sx?$": "babel-jest"},
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
