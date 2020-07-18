@@ -35,8 +35,8 @@ describe("NotificationStorage", () => {
   it("should handle all timers", () => {
     // Start slide-out and unmount timers
     wrapper = setupWrapper(setupStore({ visibility: true }));
-    expect(setTimeout).toHaveBeenNthCalledWith(1, expect.any(Function), 4000);
-    expect(setTimeout).toHaveBeenNthCalledWith(2, expect.any(Function), 4600);
+    expect(setTimeout).toHaveBeenNthCalledWith(1, expect.any(Function), 6000);
+    expect(setTimeout).toHaveBeenNthCalledWith(2, expect.any(Function), 6600);
     expect(setTimeout).toHaveBeenCalledTimes(2);
 
     // Click div should trigger slide-out animation immediately, then unmount after 600ms
