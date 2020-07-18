@@ -12,7 +12,7 @@ function toForwardSlashes(absolutePaths) {
 }
 
 // Pass the 2nd argument "relative" to convert to relative path
-function transformPaths(absolutePaths, conversion = "relative") {
+function transformPaths(absolutePaths, conversion = "") {
   if (conversion === "relative") {
     // Change commas to spaces
     return toForwardSlashes(toRelative(absolutePaths)).join(" ");
