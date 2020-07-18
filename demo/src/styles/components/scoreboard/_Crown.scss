@@ -8,6 +8,7 @@ $color-crown-active: #ffc657;
   fill: $color-crown-inactive-darkmode;
   height: 16px;
   width: 20.11px;
+  min-width: 20.11px;
   margin-right: 10px;
   &.has-crown {
     fill: $color-crown-active;
