@@ -4,6 +4,7 @@
   background: $color-theme-darkmode-2;
   display: flex;
   width: 185px;
+  min-width: 185px; // For Internet Explorer
 }
 
 #{$light-theme} .counter {
