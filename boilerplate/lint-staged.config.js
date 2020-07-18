@@ -1,23 +1,52 @@
 const path = require("path");
 
-// Convert aboslute paths to relative ones
+/**
+ * Convert aboslute paths to relative ones
+ * @param {array} absolutePaths - An array of absolute paths
+ */
 function toRelative(absolutePaths) {
   const cwd = process.cwd();
-  return absolutePaths.map((file) => path.relative(cwd, file));
+  return absolutePaths.map((eachPath) => path.relative(cwd, eachPath));
 }
 
-// Replace all backslashes (\) with forward-slashes (/)
-function toForwardSlashes(absolutePaths) {
-  return absolutePaths.map((filePath) => filePath.replace(/[\\]/g, "/"));
+/**
+ * Replace all backslashes (\) in paths with forward-slashes (/)
+ * @param {array} paths - An array of file paths
+ */
+function toForwardSlashes(paths) {
+  return paths.map((filePath) => filePath.replace(/[\\]/g, "/"));
 }
 
-// Pass the 2nd argument "relative" to convert to relative path
+/**
+ * Remove all file extensions from paths
+ * @param {array} paths - An array of file paths
+ */
+function removeExtensions(paths) {
+  return paths.map((filePath) => filePath.replace(/\.([a-zA-Z]+)/gi, ""));
+}
+
+/**
+ * Transform absolute paths to other forms
+ * @param {array} absolutePaths - An array of absolute paths passed by lint-staged
+ * @param {string} [conversion=""] - "relative" to convert to relative path, "noExtension" to convert to relative path and remove all file extensions
+ */
 function transformPaths(absolutePaths, conversion = "") {
+  // Convert to relative path
   if (conversion === "relative") {
+    let relativePaths = toRelative(absolutePaths);
     // Change commas to spaces
-    return toForwardSlashes(toRelative(absolutePaths)).join(" ");
+    return toForwardSlashes(relativePaths).join(" ");
   }
-  // Change commas to spaces
+
+  // Convert to relative path and remove all file extensions
+  else if (conversion === "noExtension") {
+    let relativePaths = toRelative(absolutePaths);
+    relativePaths = removeExtensions(relativePaths);
+    // Change commas to spaces
+    return toForwardSlashes(relativePaths).join(" ");
+  }
+
+  // Change commas to spaces (absolute paths with file extensions)
   return toForwardSlashes(absolutePaths).join(" ");
 }
 
@@ -40,7 +69,7 @@ module.exports = {
   "*.(js|jsx|ts|tsx)": (absolutePaths) =>
     `jest --bail --findRelatedTests ${transformPaths(
       absolutePaths,
-      "relative"
+      "noExtension"
     )}`,
 
   // Prettier
