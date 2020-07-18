@@ -40,11 +40,11 @@ const NotificationStorage: React.FC = () => {
       // Start slide out animation after 4s
       slideOutTimer.current = window.setTimeout(() => {
         setSlideOut(true);
-      }, 4000);
-      // After animation is finished, unmount this component
+      }, 6000);
+      // After animation (600) is finished, unmount this component
       unmountTimer.current = window.setTimeout(() => {
         setVisibility(false);
-      }, 4600);
+      }, 6600);
     }
     return (): void => {
       clearTimers();
