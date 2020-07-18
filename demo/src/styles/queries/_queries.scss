@@ -18,6 +18,7 @@
   .stopwatch,
   .counter {
     width: 155px;
+    min-width: 155px; // For Internet Explorer
   }
 
   .player {
