@@ -4,7 +4,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 16px;
+  padding: 14px 16px;
   background: $color-theme-darkmode-1;
   color: $color-body-darkmode-1;
   border-radius: $border-radius-default;
@@ -34,7 +34,7 @@
   }
 
   // Child elements
-  & svg {
+  & img {
     width: 24px;
     height: 24px;
     margin-right: 16px;

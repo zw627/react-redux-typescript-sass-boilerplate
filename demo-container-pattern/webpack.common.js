@@ -12,6 +12,7 @@ const paths = {
   template: path.resolve(__dirname, "public/index.html"),
   entry: path.resolve(__dirname, "src/index.tsx"),
 
+  assets: path.resolve(__dirname, "src/assets"),
   components: path.resolve(__dirname, "src/components"),
   containers: path.resolve(__dirname, "src/containers"),
   store: path.resolve(__dirname, "src/store"),
@@ -34,6 +35,7 @@ module.exports = {
       // Path aliases (e.g. `../../node_modules/jest` can be imported as `NodeModules/jest`)
       alias: {
         NodeModules: paths.nodeModules,
+        Assets: paths.assets,
         Components: paths.components,
         Containers: paths.containers,
         Store: paths.store,

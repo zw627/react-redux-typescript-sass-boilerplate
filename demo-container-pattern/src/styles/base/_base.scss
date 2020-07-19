@@ -44,7 +44,7 @@ input::placeholder {
   user-select: none;
 }
 
-// Disable browser's native style
+// Disable browsers native styles and settings
 input,
 button {
   appearance: none; // appearance is the browser's native style for button, input, checkbox, textarea, etc.
@@ -55,6 +55,10 @@ button {
 }
 * {
   -webkit-tap-highlight-color: transparent;
+
+  // Disalbe double tap to zoom in on mobile devices
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action#manipulation
+  touch-action: manipulation;
 }
 
 // Allow text input to have outline for accessibility
