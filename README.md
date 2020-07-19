@@ -25,6 +25,18 @@
 
 [![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com/)
 
+## Technology stack
+
+**Core:** React, Redux, TypeScript, Sass.
+
+**Testing:** Jest, Enzyme (Codecov).
+
+**DevOps:** Webpack, ESLint, stylelint, lint-staged, Husky, Prettier (Code Climate, Codacy, CodeFactor, GitHub Actions, Snyke, David-DM).
+
+**Transpilation/Polyfill:** Babel, core-js, regenerator-runtime, PostCSS, browserslist.
+
+**Others:** Redux Toolkit, Immer, UUID, Reselect, etc.
+
 ## Highlights
 
 | Feature                      | Support | Detail                                                       | Note                                                                                                                                                                                                                                                                   |
