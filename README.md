@@ -10,8 +10,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [![known vulnerabilities](https://snyk.io/test/github/zw627/react-redux-typescript-sass-boilerplate/badge.svg?targetFile=demo/package.json)](https://snyk.io/test/github/zw627/react-redux-typescript-sass-boilerplate?targetFile=demo/package.json)
-[![dependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo)
-[![devDependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/dev-status.svg?path=default)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo&type=dev)
+[![dependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/status.svg?path=demo)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo)
+[![devDependencies](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate/dev-status.svg?path=demo)](https://david-dm.org/zw627/react-redux-typescript-sass-boilerplate?path=demo&type=dev)
 
 ## Description
 
