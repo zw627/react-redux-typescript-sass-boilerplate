@@ -31,17 +31,17 @@ const NotificationStorage: React.FC = () => {
   const unmountTimer = useRef(0);
 
   function clearTimers(): void {
-    window.clearTimeout(slideOutTimer.current);
-    window.clearTimeout(unmountTimer.current);
+    clearTimeout(slideOutTimer.current);
+    clearTimeout(unmountTimer.current);
   }
 
   useEffect(() => {
     if (visibility) {
-      // Start slide out animation after 4s
+      // Start the slide out animation after 6s
       slideOutTimer.current = window.setTimeout(() => {
         setSlideOut(true);
       }, 6000);
-      // After animation (600) is finished, unmount this component
+      // After the animation (600) is finished, unmount this component
       unmountTimer.current = window.setTimeout(() => {
         setVisibility(false);
       }, 6600);
