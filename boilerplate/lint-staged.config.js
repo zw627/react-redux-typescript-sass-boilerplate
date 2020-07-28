@@ -53,13 +53,16 @@ function transformPaths(absolutePaths, conversion = "") {
 module.exports = {
   // Stylelint
   "*.(html|css|scss|sass|md)": (absolutePaths) =>
-    `stylelint --fix ${transformPaths(absolutePaths, "relative")}`,
+    `stylelint --fix --max-warnings 0 ${transformPaths(
+      absolutePaths,
+      "relative"
+    )}`,
 
   // TypeScript
-  "*.(ts|tsx)": () => "tsc -p tsconfig.json --noEmit --skipLibCheck",
+  "*.(ts|tsx)": () => `tsc -p tsconfig.json --noEmit --skipLibCheck`,
 
-  // ESLint (use same regex as Jest will not work)
-  "*.(j|t)s(x)?": (absolutePaths) =>
+  // ESLint
+  "*.(js|jsx|ts|tsx)?": (absolutePaths) =>
     `eslint --fix --max-warnings=0 ${transformPaths(
       absolutePaths,
       "relative"
