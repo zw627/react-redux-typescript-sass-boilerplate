@@ -1,4 +1,5 @@
 const path = require("path");
+const { CLIEngine } = require("eslint");
 
 /**
  * Convert aboslute paths to relative ones
@@ -6,7 +7,7 @@ const path = require("path");
  */
 function toRelative(absolutePaths) {
   const cwd = process.cwd();
-  return absolutePaths.map((eachPath) => path.relative(cwd, eachPath));
+  return absolutePaths.map((filePath) => path.relative(cwd, filePath));
 }
 
 /**
@@ -50,6 +51,15 @@ function transformPaths(absolutePaths, conversion = "") {
   return toForwardSlashes(absolutePaths).join(" ");
 }
 
+/**
+ * Remove paths that are ignored by ESLint
+ * @param {array} paths - An array of file paths
+ */
+function removeESLintIgnoredFiles(paths) {
+  const cli = new CLIEngine({});
+  return paths.filter((filePath) => !cli.isPathIgnored(filePath));
+}
+
 module.exports = {
   // Stylelint
   "*.(html|css|scss|sass|md)": (absolutePaths) =>
@@ -64,7 +74,7 @@ module.exports = {
   // ESLint
   "*.(js|jsx|ts|tsx)?": (absolutePaths) =>
     `eslint --fix --max-warnings=0 ${transformPaths(
-      absolutePaths,
+      removeESLintIgnoredFiles(absolutePaths),
       "relative"
     )}`,
 
