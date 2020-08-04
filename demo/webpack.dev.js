@@ -20,6 +20,7 @@ module.exports = merge(common, {
     hot: true, // Hot Module Replacement (HMR) allows modules to be updated at runtime without a full refresh
     open: true,
     useLocalIp: true, // Open ip:port instead of 0.0.0.0:port (Windows does not recognize 0.0.0.0)
+    compress: true, // Enable gzip compression for everything served
   },
 
   plugins: [
