@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
 import notificationReducer from "./notification";
 import scoreboardReducer from "./scoreboard/";
@@ -17,8 +17,14 @@ export type AppState = ReturnType<typeof rootReducer>;
 // Load state from localStorage
 const preloadedState = loadStateFromLocal();
 
-// Registers reducers with Redux, creates a Redux store that holds state
-const store = configureStore({ reducer: rootReducer, preloadedState });
+// Register reducers with Redux and create a store
+// Load state
+// Apply middleware
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState,
+  middleware: getDefaultMiddleware(),
+});
 
 // Subscribe to localStorage
 store.subscribe(() => {
