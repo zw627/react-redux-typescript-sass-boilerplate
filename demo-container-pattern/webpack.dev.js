@@ -15,12 +15,14 @@ module.exports = merge(common, {
 
   devServer: {
     host: "0.0.0.0", // 0.0.0.0 to allow external devices to access
-    // port: 3000, // Commented to allow dynamic ports for multiple instances
-    // public: `localhost:3000`, // The specified url will be opened automatically on every run (if `open` is true)
     hot: true, // Hot Module Replacement (HMR) allows modules to be updated at runtime without a full refresh
-    open: true,
+    open: true, // Open the browser automatically on start
     useLocalIp: true, // Open ip:port instead of 0.0.0.0:port (Windows does not recognize 0.0.0.0)
     compress: true, // Enable gzip compression for everything served
+    historyApiFallback: true, // Enable to support HTML5 History API (e.g. React Router requires this)
+
+    // port: 3000, // Commented to allow dynamic ports for multiple instances
+    // public: `localhost:3000`, // The specified url will be opened
   },
 
   plugins: [
