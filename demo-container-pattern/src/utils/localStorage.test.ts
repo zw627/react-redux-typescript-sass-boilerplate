@@ -12,6 +12,7 @@ describe("store/localStorage", () => {
     state = {
       notification: store.getState().notification,
       scoreboard: store.getState().scoreboard,
+      theme: store.getState().theme,
     };
     stringifiedState = JSON.stringify(state);
   });

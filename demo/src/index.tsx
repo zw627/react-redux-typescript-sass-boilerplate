@@ -6,19 +6,32 @@ import "regenerator-runtime/runtime";
 import { enableAllPlugins } from "immer";
 enableAllPlugins();
 
-import React from "react";
+import React, { Suspense } from "react";
 import { render } from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import store from "Store/index";
-import Scoreboard from "Components/Scoreboard";
+import Home from "Components/Home";
 import NotificationStorage from "Components/NotificationStorage";
+import ThemeSwtich from "Components/ThemeSwitch";
 import "Styles/index.scss";
 
-render(
+const Scoreboard = React.lazy(() => import("Components/Scoreboard"));
+const App = (
   <Provider store={store}>
-    <Scoreboard />
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/scoreboard" component={Scoreboard} />
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
+
     <NotificationStorage />
-  </Provider>,
-  document.getElementById("root")
+    <ThemeSwtich />
+  </Provider>
 );
+
+render(App, document.getElementById("root"));

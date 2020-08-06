@@ -5,6 +5,9 @@ import { AppState } from "Store/index";
 import toggleBodyClass from "Utils/toggleBodyClass";
 import { isLightModeSelector } from "Utils/selectors";
 
+import sunIconPath from "Assets/sun.svg";
+import moonIconPath from "Assets/moon.svg";
+
 const ThemeSwitch: React.FC<Record<string, unknown>> = () => {
   // State (redux)
   const isLightMode = useSelector((state: AppState) =>
@@ -21,8 +24,12 @@ const ThemeSwitch: React.FC<Record<string, unknown>> = () => {
   toggleBodyClass(isLightMode);
 
   return (
-    <button className="mode-switch" onClick={toggle}>
-      {isLightMode ? "Light" : "Dark"}
+    <button className="theme-switch" onClick={toggle}>
+      <img className="theme-switch-icon-sun" src={sunIconPath} alt="Sun" />
+      <img className="theme-switch-icon-moon" src={moonIconPath} alt="Moon" />
+      <span
+        className={`theme-switch-slider ${isLightMode ? "left" : "right"}`}
+      ></span>
     </button>
   );
 };

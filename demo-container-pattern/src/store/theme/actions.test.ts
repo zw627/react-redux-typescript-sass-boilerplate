@@ -1,4 +1,4 @@
-import { toggle } from "Store/scoreboard/theme/actions";
+import { toggle } from "Store/theme/actions";
 
 describe("scoreboard/theme actions", () => {
   it("should switch theme", () => {

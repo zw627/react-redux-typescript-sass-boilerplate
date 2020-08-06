@@ -64,9 +64,9 @@ export function setupStore({
         previousTime,
         elapsedTime,
       },
-      theme: {
-        isLightMode,
-      },
+    },
+    theme: {
+      isLightMode,
     },
   });
 }

@@ -1,0 +1,68 @@
+// --------------------------------------------- //
+
+$theme-switch-transition: all 0.25s cubic-bezier(0.1, 0.1, 0.25, 0.9);
+$theme-switch-color: rgba(255, 255, 255, 0.3);
+
+.theme-switch {
+  color: $theme-switch-color;
+  transition: $theme-switch-transition;
+  background-color: #464646;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  margin: 0;
+  padding: 4px 6px;
+  padding-top: 6px;
+  cursor: pointer;
+  width: 60px;
+  height: 34px;
+
+  #{$light-theme} & {
+    color: $theme-switch-color;
+    background-color: rgba(153, 153, 153, 0.3);
+  }
+
+  span {
+    transition: $theme-switch-transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #b3b3b3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+  }
+
+  span.theme-switch-slider.left {
+    transform: translateX(0px);
+  }
+
+  span.theme-switch-slider.right {
+    transform: translateX(26px);
+  }
+
+  img {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+  }
+
+  img.theme-switch-icon-moon {
+    left: 8px;
+    top: 11px;
+  }
+
+  img.theme-switch-icon-sun {
+    right: 8px;
+    top: 11px;
+  }
+}
+
+// --------------------------------------------- //

@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { Store } from "redux";
 import { mount, ReactWrapper } from "enzyme";
 
-import ThemeSwitch from "Components/Scoreboard/PlayerDetail/ThemeSwitch";
+import ThemeSwitch from "Components/ThemeSwitch";
 import { setupStore } from "Utils/testUtils";
 
 function setupWrapper(mockStore = setupStore(), props = {}): ReactWrapper {
@@ -29,14 +29,14 @@ describe("Scoreboard/ThemeSwitch", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should display "Dark" by default', () => {
-    expect(wrapper.find("button").at(0).text()).toEqual("Dark");
-  });
-
-  it('should display "Light" if light theme', () => {
+  it("should display the slider on the left side if light mode", () => {
     mockStore = setupStore({ isLightMode: true });
     wrapper = setupWrapper(mockStore);
-    expect(wrapper.find("button").at(0).text()).toEqual("Light");
+    expect(wrapper.find(".theme-switch-slider.left").length).toEqual(1);
+  });
+
+  it("should display the slider on the right side if dark mode", () => {
+    expect(wrapper.find(".theme-switch-slider.right").length).toEqual(1);
   });
 
   it("should handle switchTheme() dispatch", () => {

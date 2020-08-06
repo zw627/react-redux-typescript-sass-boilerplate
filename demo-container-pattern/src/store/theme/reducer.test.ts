@@ -1,8 +1,8 @@
-import { ThemeActions } from "Store/scoreboard/theme/actions";
+import { ThemeActions } from "Store/theme/actions";
 import themeReducer, {
   initializeState,
   initialState,
-} from "Store/scoreboard/theme/reducer";
+} from "Store/theme/reducer";
 
 describe("scoreboard/themeReducer", () => {
   it("should return the initial state", () => {

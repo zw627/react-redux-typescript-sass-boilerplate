@@ -244,14 +244,6 @@ exports[`Scoreboard compare to the last snapshot 1`] = `
           <p>
             *Click on a player to see more details.
           </p>
-          <Memo(ThemeSwitch)>
-            <button
-              className="mode-switch"
-              onClick={[Function]}
-            >
-              Dark
-            </button>
-          </Memo(ThemeSwitch)>
         </div>
       </PlayerDetail>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 
-import ThemeSwitch from "Containers/Scoreboard/PlayerDetail/ThemeSwitch";
 import { PlayerDetaiProps } from "Containers/Scoreboard/PlayerDetail";
 
 const PlayerDetail: React.FC<PlayerDetaiProps> = ({
@@ -32,12 +31,7 @@ const PlayerDetail: React.FC<PlayerDetaiProps> = ({
     );
   }
 
-  return (
-    <div className="player-detail">
-      {playerDetailElements}
-      <ThemeSwitch />
-    </div>
-  );
+  return <div className="player-detail">{playerDetailElements}</div>;
 };
 
 export default PlayerDetail;
