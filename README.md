@@ -35,7 +35,7 @@
 
 **Transpilation/Polyfill:** Babel, core-js, regenerator-runtime, PostCSS, browserslist.
 
-**Others:** Redux Toolkit, Immer, UUID, Reselect, etc.
+**Others:** react-router-dom, Redux Toolkit, Immer, UUID, Reselect, etc.
 
 ## Highlights
 
