@@ -5,7 +5,7 @@ import PlayerDetail from "Components/Scoreboard/PlayerDetail";
 
 // Store
 import { AppState } from "Store/index";
-import { playerDetailSelector } from "Utils/selectors";
+import { playerDetailSelector } from "Store/selectors";
 import { PlayerObject } from "Store/scoreboard/player/actions";
 
 export interface PlayerDetaiProps {

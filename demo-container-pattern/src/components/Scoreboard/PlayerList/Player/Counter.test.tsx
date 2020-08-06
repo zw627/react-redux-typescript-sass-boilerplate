@@ -6,7 +6,7 @@ import mockdate from "mockdate";
 import { update } from "Store/scoreboard/player/actions";
 import Counter from "Components/Scoreboard/PlayerList/Player/Counter";
 import { setupStore } from "Utils/testUtils";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { CounterProps } from "Containers/Scoreboard/PlayerList/Player/Counter";

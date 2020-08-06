@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
 import toggleBodyClass from "Utils/toggleBodyClass";
-import { isLightModeSelector } from "Utils/selectors";
+import { isLightModeSelector } from "Store/selectors";
 
 import sunIconPath from "Assets/sun.svg";
 import moonIconPath from "Assets/moon.svg";

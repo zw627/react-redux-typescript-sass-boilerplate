@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
 import getCurrentDate from "Utils/getCurrentDate";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 interface CounterProps {
   index: number;

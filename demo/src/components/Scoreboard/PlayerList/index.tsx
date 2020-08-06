@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
 import Player from "./Player";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 const PlayerList: React.FC<Record<string, unknown>> = () => {
   // State (redux)

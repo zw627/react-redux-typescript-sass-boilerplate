@@ -5,7 +5,7 @@ import ThemeSwitch from "Components/ThemeSwtich";
 
 // Store
 import { AppState } from "Store/index";
-import { isLightModeSelector } from "Utils/selectors";
+import { isLightModeSelector } from "Store/selectors";
 import { toggle, ThemeState } from "Store/theme/actions";
 
 export interface ThemeSwitchProps extends ThemeState {

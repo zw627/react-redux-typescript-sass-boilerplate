@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Stats from "Components/Scoreboard/Header/Stats";
 
 // Store
-import { playerCountSelector, scoreCountSelector } from "Utils/selectors";
+import { playerCountSelector, scoreCountSelector } from "Store/selectors";
 import { AppState } from "Store/index";
 
 export interface StatsProps {

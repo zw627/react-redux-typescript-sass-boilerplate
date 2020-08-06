@@ -5,7 +5,7 @@ import { mount, ReactWrapper } from "enzyme";
 
 import Crown from "Components/Scoreboard/PlayerList/Player/Crown";
 import { setupStore } from "Utils/testUtils";
-import { playerListSelector, scoreListSelector } from "Utils/selectors";
+import { playerListSelector, scoreListSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { CrownProps } from "Containers/Scoreboard/PlayerList/Player/Crown";

@@ -5,7 +5,7 @@ import Stopwatch from "Components/Scoreboard/Header/Stopwatch";
 
 // Store
 import { AppState } from "Store/index";
-import { isRunningSelector, elaspedTimeSelector } from "Utils/selectors";
+import { isRunningSelector, elaspedTimeSelector } from "Store/selectors";
 import { tick, toggle, reset } from "Store/scoreboard/stopwatch/actions";
 
 interface StopwatchStateProps {

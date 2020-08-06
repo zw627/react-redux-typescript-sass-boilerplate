@@ -6,7 +6,7 @@ import Counter from "Components/Scoreboard/PlayerList/Player/Counter";
 // Store
 import { AppState } from "Store/index";
 import { update } from "Store/scoreboard/player/actions";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 interface CounterStateProps {
   id: string;

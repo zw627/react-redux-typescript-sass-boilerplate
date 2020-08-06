@@ -4,7 +4,7 @@ import { mount, ReactWrapper } from "enzyme";
 
 import PlayerList from "Components/Scoreboard/PlayerList/";
 import { setupStore } from "Utils/testUtils";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { PlayerListProps } from "Containers/Scoreboard/PlayerList";

@@ -4,7 +4,7 @@ import { mount, ReactWrapper } from "enzyme";
 
 import Stats from "Components/Scoreboard/Header/Stats";
 import { setupStore, multiToEqual } from "Utils/testUtils";
-import { playerCountSelector, scoreCountSelector } from "Utils/selectors";
+import { playerCountSelector, scoreCountSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { StatsProps } from "Containers/Scoreboard/Header/Stats";
