@@ -66,8 +66,7 @@ export const elaspedTimeSelector = createSelector(
 // ------------------------------------------------------ //
 // Scoreboard/Theme
 
-const themeState = (state: AppState): AppState["scoreboard"]["theme"] =>
-  state.scoreboard.theme;
+const themeState = (state: AppState): AppState["theme"] => state.theme;
 
 export const isLightModeSelector = createSelector(
   themeState,

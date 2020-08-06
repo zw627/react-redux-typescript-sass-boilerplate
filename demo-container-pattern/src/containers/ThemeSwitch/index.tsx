@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
 
 // Component
-import ThemeSwitch from "Components/Scoreboard/PlayerDetail/ThemeSwitch";
+import ThemeSwitch from "Components/ThemeSwtich";
 
 // Store
 import { AppState } from "Store/index";
 import { isLightModeSelector } from "Utils/selectors";
-import { toggle, ThemeState } from "Store/scoreboard/theme/actions";
+import { toggle, ThemeState } from "Store/theme/actions";
 
 export interface ThemeSwitchProps extends ThemeState {
   toggle: typeof toggle;

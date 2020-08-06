@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
-import ThemeSwitch from "./ThemeSwitch";
 import { playerDetailSelector } from "Utils/selectors";
 
 const PlayerDetail: React.FC<Record<string, unknown>> = () => {
@@ -35,12 +34,7 @@ const PlayerDetail: React.FC<Record<string, unknown>> = () => {
     );
   }
 
-  return (
-    <div className="player-detail">
-      {playerDetailElements}
-      <ThemeSwitch />
-    </div>
-  );
+  return <div className="player-detail">{playerDetailElements}</div>;
 };
 
 export default PlayerDetail;

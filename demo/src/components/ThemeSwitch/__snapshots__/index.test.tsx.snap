@@ -14,10 +14,22 @@ exports[`Scoreboard/ThemeSwitch compare to the last snapshot 1`] = `
 >
   <Memo(ThemeSwitch)>
     <button
-      className="mode-switch"
+      className="theme-switch"
       onClick={[Function]}
     >
-      Dark
+      <img
+        alt="Sun"
+        className="theme-switch-icon-sun"
+        src={Object {}}
+      />
+      <img
+        alt="Moon"
+        className="theme-switch-icon-moon"
+        src={Object {}}
+      />
+      <span
+        className="theme-switch-slider right"
+      />
     </button>
   </Memo(ThemeSwitch)>
 </Provider>

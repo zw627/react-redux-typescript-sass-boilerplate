@@ -1,7 +1,4 @@
-import theme, {
-  initialState,
-  initializeState,
-} from "Store/scoreboard/theme/slice";
+import theme, { initialState, initializeState } from "Store/theme/slice";
 
 describe("scoreboard/theme", () => {
   it("should handle the initial state", () => {
