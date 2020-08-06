@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Notification from "Components/common/Notification";
 import { AppState } from "Store/index";
-import { notiStorageVisibilitySelector } from "Utils/selectors";
+import { notiStorageVisibilitySelector } from "Store/selectors";
 import { checkLocalStorage } from "Utils/localStorage";
 
 const NotificationStorage: React.FC = () => {

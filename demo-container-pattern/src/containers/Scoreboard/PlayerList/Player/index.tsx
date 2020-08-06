@@ -5,7 +5,7 @@ import Player from "Components/Scoreboard/PlayerList/Player";
 
 // Store
 import { AppState } from "Store/index";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 import { remove, select } from "Store/scoreboard/player/actions";
 
 interface PlayerStateProps {

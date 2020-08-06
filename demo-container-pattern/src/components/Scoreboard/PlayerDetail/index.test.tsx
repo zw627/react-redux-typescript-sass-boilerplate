@@ -5,7 +5,7 @@ import { mount, ReactWrapper } from "enzyme";
 
 import PlayerDetail from "Components/Scoreboard/PlayerDetail/";
 import { setupStore, matchMultiLength, multiToEqual } from "Utils/testUtils";
-import { playerDetailSelector } from "Utils/selectors";
+import { playerDetailSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { PlayerDetaiProps } from "Containers/Scoreboard/PlayerDetail";

@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
-import { playerListSelector, scoreListSelector } from "Utils/selectors";
+import { playerListSelector, scoreListSelector } from "Store/selectors";
 
 interface CrownProps {
   index: number;

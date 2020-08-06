@@ -6,7 +6,7 @@ import { mount, ReactWrapper } from "enzyme";
 import { remove, select } from "Store/scoreboard/player/actions";
 import Player from "Components/Scoreboard/PlayerList/Player/index";
 import { setupStore, matchMultiLength } from "Utils/testUtils";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { PlayerProps } from "Containers/Scoreboard/PlayerList/Player";

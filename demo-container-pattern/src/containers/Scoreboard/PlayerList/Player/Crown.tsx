@@ -5,7 +5,7 @@ import Crown from "Components/Scoreboard/PlayerList/Player/Crown";
 
 // Store
 import { AppState } from "Store/index";
-import { scoreListSelector, playerListSelector } from "Utils/selectors";
+import { scoreListSelector, playerListSelector } from "Store/selectors";
 
 export interface CrownProps {
   hasCrown: boolean;

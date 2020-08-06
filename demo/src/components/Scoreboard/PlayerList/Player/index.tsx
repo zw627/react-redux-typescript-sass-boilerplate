@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "Store/index";
 import Counter from "./Counter";
 import Crown from "./Crown";
-import { playerListSelector } from "Utils/selectors";
+import { playerListSelector } from "Store/selectors";
 
 interface PlayerProps {
   index: number;

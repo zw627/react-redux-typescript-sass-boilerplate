@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
 import formatTime from "Utils/formatTime";
-import { isRunningSelector, elaspedTimeSelector } from "Utils/selectors";
+import { isRunningSelector, elaspedTimeSelector } from "Store/selectors";
 
 const Stopwatch: React.FC<Record<string, unknown>> = () => {
   // State (redux)

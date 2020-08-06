@@ -6,7 +6,7 @@ import { mount, ReactWrapper } from "enzyme";
 import { toggle } from "Store/theme/actions";
 import ThemeSwitch from "Components/ThemeSwtich";
 import { setupStore } from "Utils/testUtils";
-import { isLightModeSelector } from "Utils/selectors";
+import { isLightModeSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { ThemeSwitchProps } from "Containers/ThemeSwitch";

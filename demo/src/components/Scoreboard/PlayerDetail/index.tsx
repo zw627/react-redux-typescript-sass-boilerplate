@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { AppState } from "Store/index";
-import { playerDetailSelector } from "Utils/selectors";
+import { playerDetailSelector } from "Store/selectors";
 
 const PlayerDetail: React.FC<Record<string, unknown>> = () => {
   // State (redux)

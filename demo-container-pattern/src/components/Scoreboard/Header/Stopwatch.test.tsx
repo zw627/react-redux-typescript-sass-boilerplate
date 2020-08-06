@@ -7,7 +7,7 @@ import mockdate from "mockdate";
 import { tick, toggle, reset } from "Store/scoreboard/stopwatch/actions";
 import Stopwatch from "Components/Scoreboard/Header/Stopwatch";
 import { setupStore } from "Utils/testUtils";
-import { isRunningSelector, elaspedTimeSelector } from "Utils/selectors";
+import { isRunningSelector, elaspedTimeSelector } from "Store/selectors";
 
 import { AppState } from "Store/index";
 import { StopwatchProps } from "Containers/Scoreboard/Header/Stopwatch";
