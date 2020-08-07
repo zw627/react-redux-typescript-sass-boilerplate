@@ -42,26 +42,26 @@ const Player: React.FC<PlayerProps> = ({ index }: PlayerProps) => {
   }
 
   // JSX elements
-  const playerRemoveAnchor = (
-    <a
+  const playerRemoveDiv = (
+    <div
       className={
         isSelected ? "remove-player remove-player-selected" : "remove-player"
       }
       onClick={handlePlayerRemove}
     >
       ✕
-    </a>
+    </div>
   );
   const playerNameDiv = (
-    <div className="player-name">
-      {playerRemoveAnchor}
+    <div className="player-name" onClick={handlePlayerSelect}>
       <Crown index={index} />
-      <span onClick={handlePlayerSelect}>{name}</span>
+      <span>{name}</span>
     </div>
   );
 
   return (
     <div className={isSelected ? "player player-selected" : "player"}>
+      {playerRemoveDiv}
       {playerNameDiv}
       <Counter index={index} />
     </div>

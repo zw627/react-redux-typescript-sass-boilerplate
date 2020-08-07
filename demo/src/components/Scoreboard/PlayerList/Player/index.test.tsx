@@ -34,7 +34,7 @@ describe("Scoreboard/Player", () => {
 
   it("should display player name", () => {
     // Name of the player at index 0, because we passed 0 to setupWrapper
-    expect(wrapper.find("span").at(0).text()).toEqual("Alpha");
+    expect(wrapper.find("span").text()).toEqual("Alpha");
   });
 
   it("should update related classes if a player is selected", () => {
@@ -62,13 +62,13 @@ describe("Scoreboard/Player", () => {
     wrapper = setupWrapper(mockStore);
     /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "matchMultiLength"] }] */
     matchMultiLength(wrapper, [
-      ["div.player.player-selected", 1],
-      ["a.remove-player.remove-player-selected", 1],
+      [".player.player-selected", 1],
+      [".remove-player.remove-player-selected", 1],
     ]);
   });
 
   it("should handle removePlayer() dispatch", () => {
-    wrapper.find("a.remove-player").simulate("click");
+    wrapper.find(".remove-player").simulate("click");
     expect(mockStore.dispatch).toHaveBeenCalledWith({
       type: "player/remove",
       payload: {
@@ -79,7 +79,7 @@ describe("Scoreboard/Player", () => {
   });
 
   it("should handle selectPlayer() dispatch", () => {
-    wrapper.find("span").simulate("click");
+    wrapper.find(".player-name").simulate("click");
     expect(mockStore.dispatch).toHaveBeenCalledWith({
       type: "player/select",
       payload: {

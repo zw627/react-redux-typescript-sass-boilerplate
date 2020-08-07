@@ -24,14 +24,15 @@ exports[`Scoreboard/PlayerList compare to the last snapshot 1`] = `
           className="player"
         >
           <div
-            className="player-name"
+            className="remove-player"
+            onClick={[Function]}
           >
-            <a
-              className="remove-player"
-              onClick={[Function]}
-            >
-              ✕
-            </a>
+            ✕
+          </div>
+          <div
+            className="player-name"
+            onClick={[Function]}
+          >
             <Memo(Crown)
               index={0}
             >
@@ -51,9 +52,7 @@ exports[`Scoreboard/PlayerList compare to the last snapshot 1`] = `
                 />
               </svg>
             </Memo(Crown)>
-            <span
-              onClick={[Function]}
-            >
+            <span>
               Alpha
             </span>
           </div>
@@ -92,14 +91,15 @@ exports[`Scoreboard/PlayerList compare to the last snapshot 1`] = `
           className="player"
         >
           <div
-            className="player-name"
+            className="remove-player"
+            onClick={[Function]}
           >
-            <a
-              className="remove-player"
-              onClick={[Function]}
-            >
-              ✕
-            </a>
+            ✕
+          </div>
+          <div
+            className="player-name"
+            onClick={[Function]}
+          >
             <Memo(Crown)
               index={1}
             >
@@ -119,9 +119,7 @@ exports[`Scoreboard/PlayerList compare to the last snapshot 1`] = `
                 />
               </svg>
             </Memo(Crown)>
-            <span
-              onClick={[Function]}
-            >
+            <span>
               Beta
             </span>
           </div>
