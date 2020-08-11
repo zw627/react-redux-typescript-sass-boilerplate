@@ -42,7 +42,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/redux-immutable-state-invariant": "^2.1.1",
     "@types/uuid": "^8.0.1",
-    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.8.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
