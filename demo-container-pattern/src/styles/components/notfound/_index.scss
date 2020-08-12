@@ -1,0 +1,12 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #b3b3b3;
+  height: 90%;
+
+  p {
+    margin: 0;
+  }
+}
