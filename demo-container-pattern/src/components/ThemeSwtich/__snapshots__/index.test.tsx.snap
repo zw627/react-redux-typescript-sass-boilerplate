@@ -1,39 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Scoreboard/ThemeSwitch compare to the last snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
+<ThemeSwitch
+  isLightMode={false}
+  toggle={[MockFunction]}
 >
-  <ThemeSwitch
-    isLightMode={false}
-    toggle={[MockFunction]}
+  <button
+    className="theme-switch"
+    onClick={[MockFunction]}
   >
-    <button
-      className="theme-switch"
-      onClick={[MockFunction]}
-    >
-      <img
-        alt="Sun"
-        className="theme-switch-icon-sun"
-        src={Object {}}
-      />
-      <img
-        alt="Moon"
-        className="theme-switch-icon-moon"
-        src={Object {}}
-      />
-      <span
-        className="theme-switch-slider right"
-      />
-    </button>
-  </ThemeSwitch>
-</Provider>
+    <img
+      alt="Sun"
+      className="theme-switch-icon-sun"
+      src={Object {}}
+    />
+    <img
+      alt="Moon"
+      className="theme-switch-icon-moon"
+      src={Object {}}
+    />
+    <span
+      className="theme-switch-slider right"
+    />
+  </button>
+</ThemeSwitch>
 `;

@@ -35,7 +35,7 @@ describe("Scoreboard/AddPlayerForm", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(AddPlayerForm)).toMatchSnapshot();
   });
 
   it("should handle <input> onChange", () => {

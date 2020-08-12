@@ -29,7 +29,7 @@ describe("Scoreboard/Player", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Player)).toMatchSnapshot();
   });
 
   it("should display player name", () => {

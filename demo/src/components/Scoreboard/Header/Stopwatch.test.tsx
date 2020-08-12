@@ -30,7 +30,7 @@ describe("Scoreboard/Stopwatch", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Stopwatch)).toMatchSnapshot();
   });
 
   it('should display time in "m:s.ms" format', () => {

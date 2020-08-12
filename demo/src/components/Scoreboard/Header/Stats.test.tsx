@@ -25,7 +25,7 @@ describe("Scoreboard/Stats", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Stats)).toMatchSnapshot();
   });
 
   it("should display player and point count", () => {
