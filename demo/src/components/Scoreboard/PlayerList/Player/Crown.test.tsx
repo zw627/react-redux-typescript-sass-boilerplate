@@ -27,7 +27,7 @@ describe("Scoreboard/Crown", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Crown)).toMatchSnapshot();
   });
 
   it('should have "crown" class by default', () => {

@@ -22,6 +22,6 @@ describe("Scoreboard/PlayerList", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(PlayerList)).toMatchSnapshot();
   });
 });

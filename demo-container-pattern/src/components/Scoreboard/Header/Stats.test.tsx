@@ -37,7 +37,7 @@ describe("Scoreboard/Stats", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Stats)).toMatchSnapshot();
   });
 
   /* eslint jest/expect-expect: ["error", { "assertFunctionNames": ["expect", "multiToEqual"] }] */

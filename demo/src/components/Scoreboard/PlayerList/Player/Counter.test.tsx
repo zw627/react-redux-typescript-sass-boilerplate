@@ -33,7 +33,7 @@ describe("Scoreboard/Counter", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(Counter)).toMatchSnapshot();
   });
 
   it("should display score", () => {

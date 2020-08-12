@@ -44,7 +44,7 @@ describe("Scoreboard/ThemeSwitch", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(ThemeSwitch)).toMatchSnapshot();
   });
 
   it("should display the slider on the left side if light mode", () => {

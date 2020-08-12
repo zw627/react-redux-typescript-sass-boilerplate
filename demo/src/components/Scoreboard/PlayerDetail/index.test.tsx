@@ -26,7 +26,7 @@ describe("Scoreboard/PlayerDetail", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(PlayerDetail)).toMatchSnapshot();
   });
 
   it("should display tips by default", () => {

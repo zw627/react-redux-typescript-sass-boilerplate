@@ -24,7 +24,7 @@ describe("NotificationStorage", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(NotificationStorage)).toMatchSnapshot();
   });
 
   it("should not render if visibility is false", () => {

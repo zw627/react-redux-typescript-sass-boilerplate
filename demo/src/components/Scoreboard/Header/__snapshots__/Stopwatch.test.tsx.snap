@@ -1,40 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Scoreboard/Stopwatch compare to the last snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [MockFunction],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
->
-  <Stopwatch>
+<Stopwatch>
+  <div
+    className="stopwatch"
+  >
+    <h2>
+      Stopwatch
+    </h2>
     <div
-      className="stopwatch"
+      className="stopwatch-time"
     >
-      <h2>
-        Stopwatch
-      </h2>
-      <div
-        className="stopwatch-time"
-      >
-        00:00.00
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Start
-      </button>
-      <button
-        onClick={[Function]}
-      >
-        Reset
-      </button>
+      00:00.00
     </div>
-  </Stopwatch>
-</Provider>
+    <button
+      onClick={[Function]}
+    >
+      Start
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </div>
+</Stopwatch>
 `;

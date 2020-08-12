@@ -1,40 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Scoreboard/AddPlayerForm compare to the last snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
+<AddPlayerForm
+  add={[MockFunction]}
 >
-  <AddPlayerForm
-    add={[MockFunction]}
+  <div
+    className="add-player-form"
   >
-    <div
-      className="add-player-form"
+    <form
+      onSubmit={[Function]}
     >
-      <form
-        onSubmit={[Function]}
+      <input
+        maxLength={64}
+        onChange={[Function]}
+        placeholder="Enter a player's name"
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
       >
-        <input
-          maxLength={64}
-          onChange={[Function]}
-          placeholder="Enter a player's name"
-          type="text"
-          value=""
-        />
-        <button
-          type="submit"
-        >
-          Add Player
-        </button>
-      </form>
-    </div>
-  </AddPlayerForm>
-</Provider>
+        Add Player
+      </button>
+    </form>
+  </div>
+</AddPlayerForm>
 `;

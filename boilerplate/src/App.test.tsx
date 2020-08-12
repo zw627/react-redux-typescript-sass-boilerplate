@@ -15,6 +15,6 @@ describe("App", () => {
   });
 
   test("compare to the last snapshot", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(App)).toMatchSnapshot();
   });
 });

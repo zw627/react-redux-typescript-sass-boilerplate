@@ -1,82 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Scoreboard/Player compare to the last snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [MockFunction],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
+<Memo(Player)
+  index={0}
 >
-  <Memo(Player)
-    index={0}
+  <div
+    className="player"
   >
     <div
-      className="player"
+      className="remove-player"
+      onClick={[Function]}
     >
-      <div
-        className="remove-player"
-        onClick={[Function]}
-      >
-        ✕
-      </div>
-      <div
-        className="player-name"
-        onClick={[Function]}
-      >
-        <Memo(Crown)
-          index={0}
-        >
-          <svg
-            className="crown has-crown"
-            viewBox="0 0 44 35"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M26.7616 10.6207L21.8192 0L16.9973 10.5603C15.3699 14.1207 10.9096 15.2672 7.77534 12.9741L0 7.24138L6.56986 28.8448H37.0685L43.5781 7.72414L35.7425 13.0948C32.6685 15.2672 28.3288 14.0603 26.7616 10.6207Z"
-              transform="translate(0 0.301727)"
-            />
-            <rect
-              height="3.07759"
-              transform="translate(6.56987 31.5603)"
-              width="30.4986"
-            />
-          </svg>
-        </Memo(Crown)>
-        <span>
-          Alpha
-        </span>
-      </div>
-      <Memo(Counter)
+      ✕
+    </div>
+    <div
+      className="player-name"
+      onClick={[Function]}
+    >
+      <Memo(Crown)
         index={0}
       >
-        <div
-          className="counter"
+        <svg
+          className="crown has-crown"
+          viewBox="0 0 44 35"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <button
-            className="counter-action decrement"
-            onClick={[Function]}
-          >
-            -
-          </button>
-          <div
-            className="counter-score"
-          >
-            10
-          </div>
-          <button
-            className="counter-action increment"
-            onClick={[Function]}
-          >
-            +
-          </button>
-        </div>
-      </Memo(Counter)>
+          <path
+            d="M26.7616 10.6207L21.8192 0L16.9973 10.5603C15.3699 14.1207 10.9096 15.2672 7.77534 12.9741L0 7.24138L6.56986 28.8448H37.0685L43.5781 7.72414L35.7425 13.0948C32.6685 15.2672 28.3288 14.0603 26.7616 10.6207Z"
+            transform="translate(0 0.301727)"
+          />
+          <rect
+            height="3.07759"
+            transform="translate(6.56987 31.5603)"
+            width="30.4986"
+          />
+        </svg>
+      </Memo(Crown)>
+      <span>
+        Alpha
+      </span>
     </div>
-  </Memo(Player)>
-</Provider>
+    <Memo(Counter)
+      index={0}
+    >
+      <div
+        className="counter"
+      >
+        <button
+          className="counter-action decrement"
+          onClick={[Function]}
+        >
+          -
+        </button>
+        <div
+          className="counter-score"
+        >
+          10
+        </div>
+        <button
+          className="counter-action increment"
+          onClick={[Function]}
+        >
+          +
+        </button>
+      </div>
+    </Memo(Counter)>
+  </div>
+</Memo(Player)>
 `;
