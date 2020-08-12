@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound compare to the last snapshot 1`] = `
+<NotFound>
+  <div
+    className="not-found"
+  >
+    <h1>
+      Error 404
+    </h1>
+    <p>
+      Not Found
+    </p>
+    <Link
+      to="/"
+    >
+      <LinkAnchor
+        href="/"
+        navigate={[Function]}
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Back to Home
+        </a>
+      </LinkAnchor>
+    </Link>
+  </div>
+</NotFound>
+`;

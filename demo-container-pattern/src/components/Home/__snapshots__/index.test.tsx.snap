@@ -1,50 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home compare to the last snapshot 1`] = `
-<BrowserRouter>
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
+<Home>
+  <div
+    className="home"
   >
-    <Home>
-      <div
-        className="home"
+    <Link
+      to="/scoreboard"
+    >
+      <LinkAnchor
+        href="/scoreboard"
+        navigate={[Function]}
       >
-        <Link
-          to="/scoreboard"
+        <a
+          href="/scoreboard"
+          onClick={[Function]}
         >
-          <LinkAnchor
-            href="/scoreboard"
-            navigate={[Function]}
-          >
-            <a
-              href="/scoreboard"
-              onClick={[Function]}
-            >
-              Start
-            </a>
-          </LinkAnchor>
-        </Link>
-      </div>
-    </Home>
-  </Router>
-</BrowserRouter>
+          Start
+        </a>
+      </LinkAnchor>
+    </Link>
+  </div>
+</Home>
 `;
