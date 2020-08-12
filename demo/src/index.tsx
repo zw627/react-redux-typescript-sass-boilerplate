@@ -3,10 +3,11 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 // Enable ES5 support and etc. for Immer, see https://immerjs.github.io/immer/docs/installation#pick-your-immer-version
 import { enableAllPlugins } from "immer";
+import React from "react";
 import { render } from "react-dom";
 
 import App from "Components/App";
 import "Styles/index.scss";
 
 enableAllPlugins();
-render(App, document.getElementById("root"));
+render(<App />, document.getElementById("root"));
