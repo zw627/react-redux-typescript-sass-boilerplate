@@ -1,34 +1,8 @@
 .home {
+  @include home-not-found-anchor-button;
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    width: 300px;
-    height: 100px;
-    border-radius: 9px;
-    background-color: #464646;
-    color: #b3b3b3;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.1);
-  }
-
-  #{$light-theme} & a {
-    background-color: #d4d4d4;
-    color: #ffffff;
-  }
-
-  a:active {
-    transform: translateY(4px);
-  }
 }

@@ -1,12 +1,15 @@
 .not-found {
+  @include home-not-found-anchor-button;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #b3b3b3;
+  color: #9b9b9b;
   height: 90%;
 
   p {
     margin: 0;
+    margin-bottom: 2em;
   }
 }
