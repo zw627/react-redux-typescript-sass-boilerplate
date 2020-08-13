@@ -29,9 +29,9 @@
 
 **Core:** React, Redux, TypeScript, Sass.
 
-**Testing:** Jest, Enzyme (Codecov).
+**Testing:** Jest, Enzyme, (Codecov).
 
-**DevOps:** Webpack, ESLint, stylelint, lint-staged, Husky, Prettier (Code Climate, Codacy, CodeFactor, GitHub Actions, Snyke, David-DM).
+**DevOps:** Webpack, ESLint, stylelint, lint-staged, Husky, Prettier, (Code Climate, Codacy, CodeFactor, GitHub Actions, Snyke, David-DM).
 
 **Transpilation/Polyfill:** Babel, core-js, regenerator-runtime, PostCSS, browserslist.
 
