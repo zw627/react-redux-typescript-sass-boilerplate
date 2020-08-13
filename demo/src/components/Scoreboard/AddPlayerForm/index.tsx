@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import getCurrentDate from "Utils/getCurrentDate";
 
-const AddPlayerForm: React.FC<Record<string, unknown>> = () => {
+const AddPlayerForm: React.FC = () => {
   // State (local)
   const [value, setValue] = useState("");
 

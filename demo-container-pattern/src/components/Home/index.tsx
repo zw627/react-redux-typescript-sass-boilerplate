@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home: React.FC<Record<string, unknown>> = () => {
+const Home: React.FC = () => {
   return (
     <div className="home">
       <Link to="/scoreboard">Start</Link>
