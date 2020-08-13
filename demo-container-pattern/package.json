@@ -10,6 +10,8 @@
     "prebuild": "npm run lint",
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy",
     "watch": "webpack --watch",
     "test": "jest --coverage",
     "test-watch": "npm test -- --watch",
