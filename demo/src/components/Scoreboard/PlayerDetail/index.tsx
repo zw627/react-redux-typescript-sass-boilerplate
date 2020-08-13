@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { AppState } from "Store/index";
 import { playerDetailSelector } from "Store/selectors";
 
-const PlayerDetail: React.FC<Record<string, unknown>> = () => {
+const PlayerDetail: React.FC = () => {
   // State (redux)
   const player = useSelector((state: AppState) => playerDetailSelector(state));
 

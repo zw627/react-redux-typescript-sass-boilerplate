@@ -5,7 +5,7 @@ import { AppState } from "Store/index";
 import Player from "./Player";
 import { playerListSelector } from "Store/selectors";
 
-const PlayerList: React.FC<Record<string, unknown>> = () => {
+const PlayerList: React.FC = () => {
   // State (redux)
   const playerList = useSelector((state: AppState) =>
     playerListSelector(state)

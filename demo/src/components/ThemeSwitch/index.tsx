@@ -8,7 +8,7 @@ import { isLightModeSelector } from "Store/selectors";
 import sunIconPath from "Assets/sun.svg";
 import moonIconPath from "Assets/moon.svg";
 
-const ThemeSwitch: React.FC<Record<string, unknown>> = () => {
+const ThemeSwitch: React.FC = () => {
   // State (redux)
   const isLightMode = useSelector((state: AppState) =>
     isLightModeSelector(state)

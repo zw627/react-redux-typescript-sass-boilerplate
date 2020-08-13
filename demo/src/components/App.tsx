@@ -10,11 +10,13 @@ import ThemeSwtich from "Components/ThemeSwitch";
 const Scoreboard = React.lazy(() => import("Components/Scoreboard"));
 const NotFound = React.lazy(() => import("Components/NotFound"));
 
-const App: React.FC<Record<string, unknown>> = () => {
+const App: React.FC = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
+          <NotificationStorage />
+          <ThemeSwtich />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/scoreboard" component={Scoreboard} />
@@ -22,9 +24,6 @@ const App: React.FC<Record<string, unknown>> = () => {
           </Switch>
         </Suspense>
       </BrowserRouter>
-
-      <NotificationStorage />
-      <ThemeSwtich />
     </Provider>
   );
 };
