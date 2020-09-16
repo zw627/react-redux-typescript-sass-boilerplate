@@ -71,7 +71,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-normalize": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "react-hot-loader": "^4.12.21",
     "redux-immutable-state-invariant": "^2.1.0",
     "sass-loader": "^10.0.2",
