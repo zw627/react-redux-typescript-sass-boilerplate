@@ -118,13 +118,14 @@ module.exports = {
               loader: "postcss-loader",
               options: {
                 sourceMap: true,
-                ident: "postcss",
-                plugins: [
-                  require("postcss-normalize")(), // Normalize
-                  require("postcss-preset-env")(),
-                  require("autoprefixer")(), // Add `-ms`, `-moz`, `-webkit` automatically
-                  require("cssnano")({ preset: "default" }), // Minify
-                ],
+                postcssOptions: {
+                  plugins: [
+                    require("postcss-normalize")(), // Normalize
+                    require("postcss-preset-env")(),
+                    require("autoprefixer")(), // Add `-ms`, `-moz`, `-webkit` automatically
+                    require("cssnano")({ preset: "default" }), // Minify
+                  ],
+                },
               },
             },
             // Compile SCSS to CSS
