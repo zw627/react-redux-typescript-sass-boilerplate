@@ -1,16 +1,11 @@
 const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
-const paths = require("./webpack.common.js").paths;
-const common = require("./webpack.common.js").config;
+const { paths, config } = require("./webpack.common.js");
 
-module.exports = merge(common, {
+module.exports = merge(config, {
   mode: "development",
-
-  // "source-map" for "production"
-  // "inline-source-map" for "development"
   devtool: "inline-source-map",
 
   devServer: {

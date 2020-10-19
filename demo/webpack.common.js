@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-// Centralize all paths for easy inspection, used by all `webpack.*.js`
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
+
 const paths = {
   nodeModules: path.resolve(__dirname, "node_modules"),
   output: path.resolve(__dirname, "dist"),
@@ -20,18 +20,14 @@ const paths = {
 };
 
 module.exports = {
-  // Export paths for other `webpack.*.js` to use
   paths,
 
-  // Webpack config
   config: {
-    // Entry point (e.g. `src/index.tsx`)
     entry: {
       index: paths.entry,
     },
 
     resolve: {
-      // Path aliases (e.g. `../../node_modules/jest` can be imported as `NodeModules/jest`)
       alias: {
         NodeModules: paths.nodeModules,
         Assets: paths.assets,
@@ -40,7 +36,6 @@ module.exports = {
         Styles: paths.styles,
         Utils: paths.utils,
       },
-      // Required, otherwise compiler returns module not found, cannot resolve
       extensions: [".tsx", ".ts", ".js", "jsx"],
     },
 
@@ -53,16 +48,29 @@ module.exports = {
         template: paths.template,
         filename: "index.html",
       }),
+
+      // Copy files inside `public` to the output folder, useful for static assets like favicon
+      // This imitates the similar behavior of create-react-app
+      new CopyPlugin({
+        patterns: [
+          {
+            from: paths.public,
+            globOptions: {
+              ignore: ["**/*.html"],
+            },
+          },
+        ],
+      }),
     ],
 
     optimization: {
       // Code splitting
       splitChunks: {
+        chunks: "all",
         cacheGroups: {
-          commons: {
+          defaultVendors: {
             test: /[\\/]node_modules[\\/]/,
-            name: "vendor", // Place all codes from 3rd-party inside `vendor.js`
-            chunks: "all", // https://webpack.js.org/plugins/split-chunks-plugin/#splitchunkschunks
+            name: "vendor",
           },
         },
       },
@@ -70,12 +78,10 @@ module.exports = {
 
     module: {
       rules: [
+        // TS, TSX, JS, JSX
         {
-          // .ts .js .tsx .jsx (ignore case)
           test: /\.[tj]s(x)?$/i,
-          // Ignore folders
           exclude: /(node_modules|bower_components)/,
-          // Specify loaders
           use: {
             loader: "babel-loader",
             options: {
@@ -100,12 +106,10 @@ module.exports = {
           },
         },
 
+        // SASS, SCSS, CSS
         {
-          // .sass .scss .css (ignore case)
           test: /\.(s[ac]|c)ss$/i,
-          // Ignore folders
           exclude: /(node_modules|bower_components)/,
-          // Specify loaders
           use: [
             // Extracts into separate files
             { loader: MiniCssExtractPlugin.loader, options: {} },
@@ -131,8 +135,8 @@ module.exports = {
           ],
         },
 
+        // Assets
         {
-          // .png .svg .jpg .jpeg .gif .woff .woff2 .eot .ttf .otf (ignore case; add more formats if needed)
           test: /\.(png|svg|jp(e)?g|gif|woff(2)?|eot|ttf|otf)$/i,
           use: ["file-loader"],
         },
