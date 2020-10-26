@@ -8,6 +8,10 @@ module.exports = merge(config, {
   mode: "development",
   devtool: "inline-source-map",
 
+  // See https://github.com/webpack/webpack-dev-server/issues/2759#issuecomment-708143185
+  // and https://github.com/webpack/webpack-dev-server/issues/2758
+  target: "web",
+
   devServer: {
     host: "0.0.0.0", // 0.0.0.0 to allow external devices to access
     hot: true, // Hot Module Replacement (HMR) allows modules to be updated at runtime without a full refresh
