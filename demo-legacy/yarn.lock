@@ -4863,10 +4863,10 @@ html-tags@^3.1.0:
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-3.1.0.tgz#7b5e6f7e665e9fb41f30007ed9e0d41e97fb2140"
   integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
 
-html-webpack-plugin@^5.0.0-alpha.13:
-  version "5.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.0.0-alpha.13.tgz#f41983148243632761069dadd2429452067546b8"
-  integrity sha512-S+rZM0pdnHLduf89jZZa0ozN1ne0IZHFObKIb+XG6N/PrFR9iZXkiv58lkA6LFESdVzs0sjEHYkIIBFhsDSwcg==
+html-webpack-plugin@^5.0.0-alpha.14:
+  version "5.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.0.0-alpha.14.tgz#9c7f10da25371d13d76ad159923e49aa678a9542"
+  integrity sha512-7x3KICFD+9060txBWkNsBNIuA+/4VM9pprmlExTEnGysBPzolrnhIZEOc0MkWt8Xiv478l9FiqkfVP5EfN+wzw==
   dependencies:
     "@types/html-minifier-terser" "^5.0.0"
     "@types/tapable" "^1.0.5"
