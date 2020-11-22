@@ -8,20 +8,19 @@ module.exports = merge(config, {
   mode: "development",
   devtool: "inline-source-map",
 
-  // See https://github.com/webpack/webpack-dev-server/issues/2759#issuecomment-708143185
-  // and https://github.com/webpack/webpack-dev-server/issues/2758
+  // See https://github.com/webpack/webpack-dev-server/issues/2758#issuecomment-704247909
   target: "web",
 
   devServer: {
     host: "0.0.0.0", // 0.0.0.0 to allow external devices to access
-    hot: true, // Hot Module Replacement (HMR) allows modules to be updated at runtime without a full refresh
-    open: true, // Open the browser automatically on start
+    hot: true, // Hot Module Replacement (HMR)
+    open: true, // Open in the browser automatically
     useLocalIp: true, // Open ip:port instead of 0.0.0.0:port (Windows does not recognize 0.0.0.0)
-    compress: true, // Enable gzip compression for everything served
-    historyApiFallback: true, // Enable to support HTML5 History API (e.g. React Router requires this)
+    compress: true, // Gzip compression
+    historyApiFallback: true, // Enable to support HTML5 History API (e.g. React Router)
 
     // port: 3000, // Commented to allow dynamic ports for multiple instances
-    // public: `localhost:3000`, // The specified url will be opened
+    // public: `localhost:3000`, // This specified url will be opened
   },
 
   plugins: [
