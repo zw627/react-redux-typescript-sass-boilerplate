@@ -79,7 +79,7 @@ const playerSlice = createSlice({
         if (player.id === id && checkValueCap(player.score)) {
           return {
             ...player,
-            score: player.score += delta,
+            score: (player.score += delta),
             updated: date,
           };
         }
