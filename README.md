@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/zw627/boilerplate-react-redux-ts-scss/branch/master/graph/badge.svg?token=OsVLx0rz4f)](https://codecov.io/gh/zw627/boilerplate-react-redux-ts-scss)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e355774e2727848b3246/maintainability)](https://codeclimate.com/github/zw627/boilerplate-react-redux-ts-scss/maintainability)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0d2cfda1b5ff4474ab062f658849efac)](https://www.codacy.com/manual/zw627/boilerplate-react-redux-ts-scss?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zw627/boilerplate-react-redux-ts-scss&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/42690844b68e4670b6ae018ec3fa4264)](https://www.codacy.com/gh/zw627/boilerplate-react-redux-ts-scss/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zw627/boilerplate-react-redux-ts-scss&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/zw627/boilerplate-react-redux-ts-scss/badge)](https://www.codefactor.io/repository/github/zw627/boilerplate-react-redux-ts-scss)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
