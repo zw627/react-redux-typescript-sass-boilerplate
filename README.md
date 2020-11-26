@@ -1,6 +1,6 @@
 # boilerplate-react-redux-ts-scss
 
-[![build](https://github.com/zw627/boilerplate-react-redux-ts-scss/workflows/demos/badge.svg)](https://github.com/zw627/boilerplate-react-redux-ts-scss/actions?query=workflow%3Ademos)
+[![builds](https://github.com/zw627/boilerplate-react-redux-ts-scss/workflows/builds/badge.svg)](https://github.com/zw627/boilerplate-react-redux-ts-scss/actions?query=workflow%3Abuilds)
 [![codecov](https://codecov.io/gh/zw627/boilerplate-react-redux-ts-scss/branch/master/graph/badge.svg?token=OsVLx0rz4f)](https://codecov.io/gh/zw627/boilerplate-react-redux-ts-scss)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e355774e2727848b3246/maintainability)](https://codeclimate.com/github/zw627/boilerplate-react-redux-ts-scss/maintainability)
