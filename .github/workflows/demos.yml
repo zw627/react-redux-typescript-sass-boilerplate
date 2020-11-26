@@ -39,7 +39,7 @@ jobs:
       CI: true
 
   # /demo-legacy
-  demo-container:
+  demo-legacy:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
