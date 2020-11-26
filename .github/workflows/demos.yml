@@ -3,7 +3,7 @@ name: demos
 on: [push]
 
 jobs:
-  # react-redux-typescript-sass-boilerplate/demo
+  # /demo
   demo:
     strategy:
       matrix:
@@ -38,7 +38,7 @@ jobs:
     env:
       CI: true
 
-  # react-redux-typescript-sass-boilerplate/demo-container-pattern
+  # /demo-legacy
   demo-container:
     strategy:
       matrix:
@@ -68,7 +68,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./demo-container-pattern
+        working-directory: ./demo-legacy
 
     env:
       CI: true
