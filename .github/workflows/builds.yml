@@ -25,7 +25,7 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Get Cache
+      - name: Check Yarn Cache
         uses: actions/cache@v2.1.3
         id: yarn-cache
         with:
@@ -34,9 +34,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Get Yarn Cache
+        if: steps.yarn-cache.outputs.cache-hit == 'true'
+        run: yarn --prefer-offline
+
       - name: Install Dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: yarn install --frozen-lockfile
 
       - name: Run Tests
         run: yarn test
@@ -74,7 +78,7 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Get Cache
+      - name: Check Yarn Cache
         uses: actions/cache@v2.1.3
         id: yarn-cache
         with:
@@ -83,9 +87,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Get Yarn Cache
+        if: steps.yarn-cache.outputs.cache-hit == 'true'
+        run: yarn --prefer-offline
+
       - name: Install Dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: yarn install --frozen-lockfile
 
       - name: Run Tests
         run: yarn test
