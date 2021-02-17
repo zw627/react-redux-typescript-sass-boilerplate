@@ -32,7 +32,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
     "@types/enzyme": "^3.10.8",
